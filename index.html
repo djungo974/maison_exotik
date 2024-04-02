@@ -39,10 +39,10 @@
                             <a class="nav-link navLink active" aria-current="page" href="#">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navLink" href="about-us.html">OFFRES SPECIALES</a>
+                            <a class="nav-link navLink" href="about-us.html">EN SAVOIR PLUS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navButton" href="#">découvrir</a>
+                            <a class="nav-link navButton" href="about-us.html">découvrir</a>
                         </li>
                     </ul>
                 </div>
@@ -75,15 +75,20 @@
                     de tradition.
                 </p>
                 <div class="d-flex justify-content-center savoirBtnDiv">
-                    <a href="#">En Savoir plus</a>
+                    <a href="about-us.html">En Savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- home section four  -->
     <div class="home_section_four">
-        <img src="./assets/images/image 4.png" alt="" class="wokliImg">
-        <img src="./assets/images/Frame 89.svg" alt="" class="playImg">
+        <!-- <img src="./assets/images/image 4.png" alt="" class="wokliImg"> -->
+        <video id="myVideo" autoplay muted loop class="wokliImg">
+            <source src="assets/images/wood wax for natural and furniture polish.mp4" type="video/mp4">
+            <!-- Add other video sources for different formats if necessary -->
+            Your browser does not support the video tag.
+        </video>
+        <!-- <img src="./assets/images/Frame 89.svg" alt="" class="playImg"> -->
     </div>
     <!-- home section five -->
     <div class="home_section_five">
@@ -221,6 +226,7 @@
                         <a href="http://www.instagram.com/maisonexotik"><i class='bx bxl-instagram'></i></a>
                     </div>
                 </div>
+                <p class="mt-3 mb-0 pb-0">Conçu et développé par <a href="http://Dextersol.com">Dextersol</a></p>
             </div>
         </div>
     </div>
@@ -248,16 +254,16 @@
         });
 
 
-        var swiper = new Swiper(".mySwiperTwo", {
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000, // Change the delay (in milliseconds) as needed
-            },
-        });
+        // var swiper = new Swiper(".mySwiperTwo", {
+        //     loop: true,
+        //     pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //     },
+        //     autoplay: {
+        //         delay: 3000, // Change the delay (in milliseconds) as needed
+        //     },
+        // });
 
 
     </script>

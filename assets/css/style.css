@@ -302,6 +302,7 @@ body::-webkit-scrollbar {
 }
 
 .home_section_four {
+    height: 656px;
     margin-top: 70px;
     position: relative;
     display: flex;

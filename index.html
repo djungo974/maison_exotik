@@ -1,223 +1,716 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="teak furniture, mango wood furniture, suar wood furniture, quality furniture, durable furniture, exotic furniture, India, Asia, Saint André, Réunion Island">
-    <title>Maison Exotik | Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- custom css  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- boxicons link  -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maison Exotik — Meubles en teck de l'île de Java, Indonésie. Artisanat sculpté, style exotique, éco-responsable. Saint-André, La Réunion.">
+  <meta name="keywords" content="meubles teck, java indonésie, meuble exotique, salon teck, table teck, saint-andré réunion, éco-responsable">
+  <title>Maison Exotik | Meubles en Teck de Java — Saint-André, La Réunion</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-    <!-- header section start -->
-    <section class="header_section">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar_main manageContainer">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand navbarBrand" href="index.html">
-                        <img src="./assets/images/logo.png" alt="">
-                    </a>
-                    <div class="le_charme">
-                        <h6>Le Charme exotique à domicile</h6>
-                    </div>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navUl">
-                        <li class="nav-item">
-                            <a class="nav-link navLink active" aria-current="page" href="#">MAISON</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link navLink" href="about-us.html">À propos de nous
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link navButton" href="about-us.html">découvrir</a>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
 
-    <!-- home section two  -->
-    <div class="home_section_two manageContainer">
-        <div class="compony_text_div">
-            <h1><span>Maison</span> Exotik</h1>
-            <p>Le confort et la chaleur du bois exotique accessible à tous. </p>
-            <!-- <a href="#">découvrir</a> -->
+  <!-- ═══════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════ -->
+  <nav class="site-nav" id="mainNav">
+    <div class="nav-brand">
+      <a href="index.html">
+        <img src="./assets/images/logo.png" alt="Maison Exotik">
+      </a>
+      <div class="nav-tagline">Le charme exotique<br>à domicile</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="about-us.html">Notre histoire</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#eco">Éco-responsable</a></li>
+    </ul>
+    <a href="#contact" class="nav-links nav-cta">
+      <i class='bx bx-map-pin'></i> Nous trouver
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="index.html">Accueil</a>
+    <a href="about-us.html">Notre histoire</a>
+    <a href="#collections">Collections</a>
+    <a href="#eco">Éco-responsable</a>
+    <a href="#contact">Nous trouver</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <!-- Left: text panel -->
+    <div class="hero-left">
+      <div class="hero-left-bg"></div>
+      <div class="hero-left-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          Java · Indonésie · Depuis 2009
         </div>
-    </div>
-    <!-- home section three  -->
-    <div class="manageContainer">
-        <div class="home_section_three">
-            <div class="props_text_div">
-                <h1>A propos de nous </h1>
-                <p>Bienvenue chez Maison Exotik, votre destination privilégiée pour découvrir une sélection unique de
-                    meubles en bois exotiques au cœur de Saint André depuis 2009. Niché au 8 rue de la Cocoteraie,
-                    97440, notre magasin incarne la passion et l'engagement pour l'authenticité, la qualité, et la
-                    durabilité de chaque pièce que nous proposons.
-                </p>
-                <p>Chez Maison Exotik, nous célébrons la beauté naturelle et l'élégance intemporelle du teck, du
-                    manguier, du suar, et d'autres bois exotiques, soigneusement sélectionnés pour leur qualité
-                    supérieure et leur durabilité. Notre collection, principalement composée de meubles, s'enrichit
-                    également de quelques statuettes de décoration, chacune racontant sa propre histoire d'artisanat et
-                    de tradition.
-                </p>
-                <div class="d-flex justify-content-center savoirBtnDiv">
-                    <a href="about-us.html">En Savoir plus</a>
-                </div>
-            </div>
+        <h1 class="hero-title">
+          L'Art du<br><em>Teck Javanais</em><br>à La Réunion
+        </h1>
+        <p class="hero-sub">
+          Des pièces sculptées à la main par les artisans de l'île de Java,
+          sélectionnées pour leur authenticité, leur durabilité et leur âme.
+        </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn-gold">
+            Découvrir nos collections
+            <span class="btn-arrow">
+              <i class='bx bx-right-arrow-alt'></i>
+            </span>
+          </a>
+          <a href="about-us.html" class="btn-ghost">
+            Notre histoire
+          </a>
         </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">Défiler</span>
+      </div>
     </div>
-    <!-- home section four  -->
-    <div class="home_section_four" style="overflow: hidden;">
-        <!-- <img src="./assets/images/image 4.png" alt="" class="wokliImg"> -->
-        <video id="myVideo" autoplay muted loop class="wokliImg">
-            <source src="assets/images/wood wax for natural and furniture polish.mp4" type="video/mp4">
-            <!-- Add other video sources for different formats if necessary -->
-            Your browser does not support the video tag.
-        </video>
-        <!-- <img src="./assets/images/Frame 89.svg" alt="" class="playImg"> -->
-    </div>
-    <!-- home section five -->
-    <div class="home_section_five">
-        <div class="container">
-            <h1>Irrésistiblement
-                Elégant et Moderne</h1>
 
-            <div class="home_sec5_swiper_div">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper swiper-wrapper-one">
-                        <div class="swiper-slide swiperSlide" style="object-fit: cover;overflow: hidden; height: 545px;">
-                            <img src="./assets/images/wooden-sofa-chair.png" alt="">
-                        </div>
-                        <div class="swiper-slide swiperSlide" style="object-fit:cover; overflow: hidden; height: 545px;">
-                            <img src="./assets/images/cafe-bar-diner-paysage-ete.png" alt="">
-                        </div>
-                        <div class="swiper-slide swiperSlide" style="object-fit:cover;overflow: hidden; height: 545px;">
-                            <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide swiperSlide" style="object-fit:cover;overflow: hidden; height: 545px;">
-                            <img src="./assets/images/image 2.png" alt="">
-                        </div>
-                        <div class="swiper-slide swiperSlide" style="object-fit:cover;overflow: hidden; height: 545px;">
-                            <img src="./assets/images/vue-decoration-preside-maison-terrasse.png" alt="">
-                        </div>
-                        <div class="swiper-slide swiperSlide" style="object-fit:cover;overflow: hidden; height: 545px;">
-                            <img src="./assets/images/roses-wine-glass-ice-bucket-wooden-table-restaurant.jpg" alt="">
-                        </div>
-                        <!-- <div class="swiper-slide swiperSlide" style="object-fit:cover;overflow: hidden; height: 545px;">
-                            <img src="./assets/images/beautiful-shot-modern-wooden-furniture-isolated-white.png" alt="">
-                        </div> -->
-                    </div>
-                    <div class="swiper-button-next swiperBtn" id="myButton"><img src="./assets/images/Vector.svg" alt=""></div>
-                    <div class="swiper-button-prev swiperBtn"><img src="./assets/images/Vector (1).svg" alt=""></div>
-                </div>
-            </div>
+    <!-- Right: image carousel -->
+    <div class="hero-right">
+      <div class="swiper hero-swiper" id="heroSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/images/wooden-sofa-chair.png" alt="Salon en teck de Java">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/vue-decoration-preside-maison-terrasse.png" alt="Terrasse exotique en teck">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/cafe-bar-diner-paysage-ete.png" alt="Mobilier de jardin en teck">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Buffet en teck sculpté">
+          </div>
         </div>
+      </div>
+      <!-- Counter -->
+      <div class="hero-swiper-counter">
+        <strong id="heroCurrentSlide">01</strong> / 04
+      </div>
+      <!-- Nav buttons -->
+      <div class="hero-nav-wrap">
+        <button class="hero-nav-btn" id="heroPrev" aria-label="Précédent">
+          <i class='bx bx-chevron-left'></i>
+        </button>
+        <button class="hero-nav-btn" id="heroNext" aria-label="Suivant">
+          <i class='bx bx-chevron-right'></i>
+        </button>
+      </div>
+      <!-- Badge -->
+      <div class="hero-badge">Éco-certifié</div>
     </div>
-    <!-- home section six -->
-    <div class="manageContainer" style="margin-top: 80px;">
-        <div class="home_section_six">
-            <div class="home_sec5_swiper_div">
-                <div class="swiper mySwiperTwo">
-                    <div class="swiper-wrapper swiper-wrapper-one">
-                        <div class="swiper-slide swiperSlide">
-                            <div class="row reverse_row">
-                                <div class="col-lg-7 col-md-12 col-sm-12 col-12 swipe_contenCol">
-                                    <div class="meuable_content_div">
-                                        <p>Meilleurs offres , Salons, Meuble TV, Meuble Vasque, Buffet,</p>
-                                        <h6>Meuble de rangement</h6>
-                                        <p>Promotions exceptionnelles tout au long de l'année</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-                                    <img src="./assets/images/Group 1 (1).svg" alt="" class="tableImg">
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       MARQUEE
+  ════════════════════════════════════════════════════ -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <!-- duplicated for infinite loop -->
+      <span class="marquee-item">Teck Certifié de Java</span>
+      <span class="marquee-item">Artisanat Indonésien</span>
+      <span class="marquee-item">Éco-Responsable</span>
+      <span class="marquee-item">Saint-André · La Réunion</span>
+      <span class="marquee-item">Depuis 2009</span>
+      <span class="marquee-item">Sculpté à la Main</span>
+      <span class="marquee-item">Green Economy</span>
+      <span class="marquee-item">Teck Certifié de Java</span>
+      <span class="marquee-item">Artisanat Indonésien</span>
+      <span class="marquee-item">Éco-Responsable</span>
+      <span class="marquee-item">Saint-André · La Réunion</span>
+      <span class="marquee-item">Depuis 2009</span>
+      <span class="marquee-item">Sculpté à la Main</span>
+      <span class="marquee-item">Green Economy</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       ABOUT TEASER
+  ════════════════════════════════════════════════════ -->
+  <section class="about-teaser">
+    <div class="about-left">
+      <span class="s-label reveal">Notre univers</span>
+      <h2 class="s-title reveal reveal-d1">
+        Quand l'île de Java<br>entre <em>chez vous</em>
+      </h2>
+      <p class="s-body reveal reveal-d2">
+        Bienvenue chez Maison Exotik, votre destination privilégiée pour découvrir
+        une sélection unique de meubles en teck sculpté au cœur de Saint-André
+        depuis 2009. Chaque pièce est directement sourcée auprès des ateliers
+        artisanaux de l'île de Java, en Indonésie — terre de traditions millénaires
+        et d'excellence dans le travail du bois.
+      </p>
+      <a href="about-us.html" class="btn-teak reveal reveal-d3" style="align-self:flex-start">
+        En savoir plus <i class='bx bx-right-arrow-alt' style="font-size:1.1rem"></i>
+      </a>
+    </div>
+    <div class="about-right">
+      <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Buffet en teck sculpté">
+      <div class="about-floating-card">
+        <h4>Île de Java, Indonésie</h4>
+        <p>Artisanat traditionnel · Bois certifié</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       STATS
+  ════════════════════════════════════════════════════ -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat reveal">
+        <div class="stat-num">2009</div>
+        <div class="stat-lbl">Fondé à Saint-André</div>
+      </div>
+      <div class="stat reveal reveal-d1">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">Teck Certifié</div>
+      </div>
+      <div class="stat reveal reveal-d2">
+        <div class="stat-num">Java</div>
+        <div class="stat-lbl">Île d'origine, Indonésie</div>
+      </div>
+      <div class="stat reveal reveal-d3">
+        <div class="stat-num">Éco</div>
+        <div class="stat-lbl">Green Economy engagée</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       COLLECTIONS
+  ════════════════════════════════════════════════════ -->
+  <section class="collections-section" id="collections">
+    <div class="collections-header">
+      <span class="s-label reveal">Nos collections</span>
+      <h2 class="s-title reveal reveal-d1">Meublé avec <em>caractère</em></h2>
+      <p class="reveal reveal-d2" style="font-size:.97rem;line-height:1.75;color:var(--text-muted);max-width:46ch;margin:0 auto">
+        Du salon à la terrasse, chaque pièce raconte l'histoire du teck javanais
+        et de ses artisans d'exception.
+      </p>
+    </div>
+    <div class="coll-grid">
+      <!-- Card 1 (large) -->
+      <div class="coll-card reveal">
+        <img src="./assets/images/wooden-sofa-chair.png" alt="Salons en teck">
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-tag">Collection phare</span>
+          <div class="coll-name">Salons &amp;<br>Canapés</div>
+          <span class="coll-link">
+            Explorer
+            <span class="coll-link-arrow"><i class='bx bx-right-arrow-alt'></i></span>
+          </span>
         </div>
-        <p class="mt-3 mb-0 pb-0 text-end">Conçu et développé par <a href="http://Dextersol.com" style="color: #d6a91c;">Dextersol</a></p>
-    </div>
-    <div class="footer">
-        <div class="manageContainer">
-            <div class="footer_content_div">
-                <img src="./assets/images/footer_logo.svg" alt="">
-                <div class="social_section">
-                    <div class="email_content">
-                        <i class='bx bxs-printer'></i>
-                        <p>maisonexotik974@gmail.com</p>
-                    </div>
-                    <div class="social_icon">
-                        <a href="https://www.facebook.com/maisonexotik"><i class='bx bxl-facebook-square'></i></a>
-                        <a href="http://www.instagram.com/maisonexotik"><i class='bx bxl-instagram'></i></a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="coll-card reveal reveal-d1">
+        <img src="./assets/images/cafe-bar-diner-paysage-ete.png" alt="Tables et jardins">
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-tag">Extérieur</span>
+          <div class="coll-name">Tables &amp;<br>Jardins</div>
+          <span class="coll-link">
+            Explorer
+            <span class="coll-link-arrow"><i class='bx bx-right-arrow-alt'></i></span>
+          </span>
         </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="coll-card reveal reveal-d2">
+        <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Rangements et buffets">
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-tag">Intérieur</span>
+          <div class="coll-name">Buffets &amp;<br>Rangements</div>
+          <span class="coll-link">
+            Explorer
+            <span class="coll-link-arrow"><i class='bx bx-right-arrow-alt'></i></span>
+          </span>
+        </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                576: {
-                    autoplay: true,
-                },
-            },
-        });
-        function clickButton() {
-        document.getElementById("myButton").click();
-    }
+  </section>
 
-    // Set interval to call clickButton function every 1000 milliseconds (1 second)
-    setInterval(clickButton, 3000);
+  <!-- ═══════════════════════════════════════════════════
+       VIDEO BAND
+  ════════════════════════════════════════════════════ -->
+  <div class="video-band">
+    <video autoplay muted loop playsinline>
+      <source src="./assets/images/wood wax for natural and furniture polish.mp4" type="video/mp4">
+    </video>
+    <div class="video-band-overlay">
+      <h2>La beauté brute<br>du <em>teck naturel</em></h2>
+      <p>
+        Un bois noble qui se bonifie avec le temps, résistant aux intempéries
+        et aux années — l'essence même de l'artisanat javanais.
+      </p>
+    </div>
+  </div>
 
-        // var swiper = new Swiper(".mySwiperTwo", {
-        //     loop: true,
-        //     pagination: {
-        //         el: ".swiper-pagination",
-        //         clickable: true,
-        //     },
-        //     autoplay: {
-        //         delay: 3000, // Change the delay (in milliseconds) as needed
-        //     },
-        // });
+  <!-- ═══════════════════════════════════════════════════
+       PRODUCT CAROUSEL
+  ════════════════════════════════════════════════════ -->
+  <section class="prod-carousel-section">
+    <div class="prod-carousel-head">
+      <div>
+        <span class="s-label reveal">Nos pièces maîtresses</span>
+        <h2 class="s-title reveal reveal-d1" style="color:var(--teak)">
+          Sélection <em>exclusive</em>
+        </h2>
+      </div>
+      <div class="prod-nav reveal">
+        <button class="prod-nav-btn" id="prodPrev" aria-label="Précédent">
+          <i class='bx bx-chevron-left'></i>
+        </button>
+        <button class="prod-nav-btn" id="prodNext" aria-label="Suivant">
+          <i class='bx bx-chevron-right'></i>
+        </button>
+      </div>
+    </div>
 
+    <div class="swiper prod-swiper" id="prodSwiper">
+      <div class="swiper-wrapper">
 
-    </script>
+        <div class="swiper-slide prod-slide">
+          <div class="prod-slide-img">
+            <img src="./assets/images/wooden-sofa-chair.png" alt="Salon en teck">
+          </div>
+          <div class="prod-slide-body">
+            <span class="prod-cat">Salon</span>
+            <div class="prod-name">Canapé Java Classique</div>
+            <p class="prod-desc">Teck massif sculpté, lignes épurées inspirées de l'architecture traditionnelle javanaise.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide prod-slide">
+          <div class="prod-slide-img">
+            <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Buffet teck">
+          </div>
+          <div class="prod-slide-body">
+            <span class="prod-cat">Rangement</span>
+            <div class="prod-name">Buffet Bali Sculpté</div>
+            <p class="prod-desc">Motifs floraux gravés à la main par les maîtres artisans de Jepara, Java.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide prod-slide">
+          <div class="prod-slide-img">
+            <img src="./assets/images/cafe-bar-diner-paysage-ete.png" alt="Table jardin">
+          </div>
+          <div class="prod-slide-body">
+            <span class="prod-cat">Extérieur</span>
+            <div class="prod-name">Table de Jardin Bogor</div>
+            <p class="prod-desc">Résistante aux UV et aux intempéries tropicales, parfaite pour votre terrasse réunionnaise.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide prod-slide">
+          <div class="prod-slide-img">
+            <img src="./assets/images/vue-decoration-preside-maison-terrasse.png" alt="Terrasse teck">
+          </div>
+          <div class="prod-slide-body">
+            <span class="prod-cat">Terrasse</span>
+            <div class="prod-name">Salon de Terrasse Sunda</div>
+            <p class="prod-desc">Un espace de détente authentique, directement inspiré des verandas de Yogyakarta.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide prod-slide">
+          <div class="prod-slide-img">
+            <img src="./assets/images/roses-wine-glass-ice-bucket-wooden-table-restaurant.jpg" alt="Table restaurant teck">
+          </div>
+          <div class="prod-slide-body">
+            <span class="prod-cat">Table</span>
+            <div class="prod-name">Table Centrale Solo</div>
+            <p class="prod-desc">La pièce maîtresse de votre salle à manger. Teck grade A, finition huile naturelle.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide prod-slide">
+          <div class="prod-slide-img">
+            <img src="./assets/images/image 2.png" alt="Décoration teck">
+          </div>
+          <div class="prod-slide-body">
+            <span class="prod-cat">Déco</span>
+            <div class="prod-name">Collection Statuettes</div>
+            <p class="prod-desc">Sculptures décoratives en teck et bois de manguier, chaque pièce est unique.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       JAVA STORY SECTION
+  ════════════════════════════════════════════════════ -->
+  <section class="java-section">
+    <!-- Leaf SVG decorations -->
+    <svg class="java-leaf java-leaf-1" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 0 C140 80 180 160 100 400 C20 160 60 80 100 0Z" fill="#D6A91C"/>
+      <line x1="100" y1="0" x2="100" y2="400" stroke="#D6A91C" stroke-width="1.5"/>
+      <line x1="100" y1="80" x2="60" y2="140" stroke="#D6A91C" stroke-width="1"/>
+      <line x1="100" y1="80" x2="140" y2="140" stroke="#D6A91C" stroke-width="1"/>
+      <line x1="100" y1="160" x2="50" y2="230" stroke="#D6A91C" stroke-width="1"/>
+      <line x1="100" y1="160" x2="150" y2="230" stroke="#D6A91C" stroke-width="1"/>
+      <line x1="100" y1="240" x2="60" y2="310" stroke="#D6A91C" stroke-width="1"/>
+      <line x1="100" y1="240" x2="140" y2="310" stroke="#D6A91C" stroke-width="1"/>
+    </svg>
+    <svg class="java-leaf java-leaf-2" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 0 C140 80 180 160 100 400 C20 160 60 80 100 0Z" fill="#D6A91C"/>
+      <line x1="100" y1="0" x2="100" y2="400" stroke="#D6A91C" stroke-width="1.5"/>
+      <line x1="100" y1="80" x2="60" y2="140" stroke="#D6A91C" stroke-width="1"/>
+      <line x1="100" y1="80" x2="140" y2="140" stroke="#D6A91C" stroke-width="1"/>
+    </svg>
+
+    <div class="java-grid">
+      <!-- Text -->
+      <div class="java-text">
+        <span class="s-label reveal">L'origine</span>
+        <h2 class="s-title reveal reveal-d1">
+          L'île de Java,<br>berceau d'un <em>savoir-faire</em><br>millénaire
+        </h2>
+        <p class="s-body reveal reveal-d2">
+          Java est l'île la plus peuplée d'Indonésie et le cœur battant de
+          l'artisanat du bois. La ville de Jepara, surnommée «&nbsp;la capitale
+          mondiale du meuble sculpté&nbsp;», y produit depuis des siècles les plus
+          belles pièces de teck — un bois naturellement résistant à l'humidité,
+          aux insectes et au temps.
+        </p>
+        <div class="java-features reveal reveal-d3">
+          <div class="java-feat">
+            <div class="java-feat-ico">
+              <i class='bx bx-leaf'></i>
+            </div>
+            <div class="java-feat-txt">
+              <h5>Teck Grade A</h5>
+              <p>Le teck javanais est récolté sur des plantations certifiées, garantissant une densité et une longévité exceptionnelles.</p>
+            </div>
+          </div>
+          <div class="java-feat">
+            <div class="java-feat-ico">
+              <i class='bx bx-cut'></i>
+            </div>
+            <div class="java-feat-txt">
+              <h5>Sculpture à la main</h5>
+              <p>Chaque motif est taillé au ciseau par des artisans formés depuis l'enfance aux traditions de Jepara et Yogyakarta.</p>
+            </div>
+          </div>
+          <div class="java-feat">
+            <div class="java-feat-ico">
+              <i class='bx bx-globe'></i>
+            </div>
+            <div class="java-feat-txt">
+              <h5>Directement importé</h5>
+              <p>Maison Exotik sélectionne chaque pièce en direct auprès des ateliers — sans intermédiaire pour préserver la qualité.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Images -->
+      <div class="java-imgs reveal">
+        <div class="java-img-main">
+          <img src="./assets/images/vue-decoration-preside-maison-terrasse.png" alt="Artisanat javanais">
+        </div>
+        <div class="java-img-inset">
+          <img src="./assets/images/image 2.png" alt="Sculpture teck Java">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       ECO SECTION
+  ════════════════════════════════════════════════════ -->
+  <section class="eco-section" id="eco">
+    <div class="eco-inner">
+      <div class="eco-header">
+        <span class="s-label reveal">Engagement vert</span>
+        <h2 class="s-title reveal reveal-d1">
+          Commerce <em>responsable</em>,<br>planète préservée
+        </h2>
+        <p class="s-body reveal reveal-d2">
+          Choisir Maison Exotik, c'est choisir un mobilier qui respecte la forêt
+          et soutient une économie verte durable. Notre engagement écologique
+          est au cœur de chaque décision commerciale.
+        </p>
+      </div>
+
+      <!-- 3 pillars -->
+      <div class="eco-pillars">
+        <div class="eco-pillar reveal">
+          <span class="eco-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3C9.37 3 4 8.37 4 15c0 5.08 3.01 9.46 7.37 11.47L10 29h12l-1.37-2.53C24.99 24.46 28 20.08 28 15c0-6.63-5.37-12-12-12z" stroke="#4A7C4A" stroke-width="1.5" fill="none"/>
+              <path d="M16 10v8M12 14h8" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h4>Forêts Certifiées</h4>
+          <p>Tout notre teck provient de plantations gérées durablement, certifiées par les organismes indonésiens de contrôle forestier. Aucune forêt primaire n'est exploitée.</p>
+        </div>
+        <div class="eco-pillar reveal reveal-d1">
+          <span class="eco-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" stroke="#4A7C4A" stroke-width="1.5"/>
+              <path d="M10 16c0-3.31 2.69-6 6-6s6 2.69 6 6" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 22v-6" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h4>Green Economy</h4>
+          <p>Nous contribuons activement à l'économie verte en soutenant les petits ateliers locaux de Java, favorisant des conditions de travail équitables et un commerce éthique.</p>
+        </div>
+        <div class="eco-pillar reveal reveal-d2">
+          <span class="eco-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M6 26L16 6l10 20H6z" stroke="#4A7C4A" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M16 14v6M16 22v1" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h4>Transport Raisonné</h4>
+          <p>Nos containers de fret maritime sont optimisés pour minimiser l'empreinte carbone. Nous privilégions les livraisons groupées et les emballages recyclables.</p>
+        </div>
+      </div>
+
+      <!-- Eco-tax info box -->
+      <div class="eco-tax-box reveal">
+        <div class="eco-tax-text">
+          <h3>L'<em>éco-taxe</em><br>pour un futur vert</h3>
+          <p>
+            En France et à La Réunion, une éco-taxe est perçue sur les meubles neufs
+            importés. Cette contribution — intégrée dans nos prix — est reversée à
+            l'éco-organisme <strong style="color:rgba(253,251,247,.75)">Éco-mobilier</strong>,
+            qui finance la collecte, le tri et le recyclage des meubles en fin de vie
+            sur tout le territoire.
+          </p>
+          <p style="margin-top:1rem;">
+            Chez Maison Exotik, nous ne nous contentons pas de respecter cette obligation :
+            nous la valorisons. C'est notre façon concrète de participer à l'économie
+            circulaire et de vous offrir un achat pleinement responsable.
+          </p>
+        </div>
+        <div class="eco-tax-stats">
+          <div>
+            <div class="eco-stat-num">100%</div>
+            <div class="eco-stat-lbl">Éco-taxe reversée</div>
+          </div>
+          <div>
+            <div class="eco-stat-num">0</div>
+            <div class="eco-stat-lbl">Forêt primaire exploitée</div>
+          </div>
+          <div>
+            <div class="eco-stat-num">♻</div>
+            <div class="eco-stat-lbl">Économie circulaire</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       CTA / CONTACT
+  ════════════════════════════════════════════════════ -->
+  <section class="cta-band" id="contact">
+    <div class="cta-inner">
+      <span class="s-label reveal">Venez nous voir</span>
+      <h2 class="reveal reveal-d1">
+        Vivez l'expérience<br><em>en magasin</em>
+      </h2>
+      <p class="reveal reveal-d2">
+        Les photos ne rendent pas justice à la chaleur et au grain du teck.
+        Venez toucher, sentir et vous installer dans nos pièces.
+        Notre équipe vous accueille à Saint-André.
+      </p>
+      <div class="cta-info-row">
+        <div class="cta-info-item reveal">
+          <div class="cta-info-ico"><i class='bx bx-map-pin'></i></div>
+          <div class="cta-info-txt">
+            <strong>Adresse</strong>
+            <span>8 rue de la Cocoteraie, 97440 Saint-André</span>
+          </div>
+        </div>
+        <div class="cta-info-item reveal reveal-d1">
+          <div class="cta-info-ico"><i class='bx bx-time'></i></div>
+          <div class="cta-info-txt">
+            <strong>Horaires</strong>
+            <span>Mar–Sam : 9h–12h &amp; 13h30–17h30</span>
+          </div>
+        </div>
+        <div class="cta-info-item reveal reveal-d2">
+          <div class="cta-info-ico"><i class='bx bx-envelope'></i></div>
+          <div class="cta-info-txt">
+            <strong>Contact</strong>
+            <span>maisonexotik974@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <a href="about-us.html" class="btn-teak reveal reveal-d3">
+        Voir le plan &amp; horaires <i class='bx bx-right-arrow-alt' style="font-size:1.15rem"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img class="footer-brand-img" src="./assets/images/footer_logo.svg" alt="Maison Exotik">
+        <p>Meubles en teck sculpté de l'île de Java, Indonésie. Le charme exotique à domicile depuis 2009.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/maisonexotik" class="f-social" aria-label="Facebook">
+            <i class='bx bxl-facebook'></i>
+          </a>
+          <a href="http://www.instagram.com/maisonexotik" class="f-social" aria-label="Instagram">
+            <i class='bx bxl-instagram'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about-us.html">Notre histoire</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#eco">Éco-responsable</a></li>
+          <li><a href="#contact">Nous trouver</a></li>
+        </ul>
+      </div>
+
+      <!-- Collections -->
+      <div class="footer-col">
+        <h5>Collections</h5>
+        <ul>
+          <li><a href="#collections">Salons &amp; Canapés</a></li>
+          <li><a href="#collections">Tables de salle à manger</a></li>
+          <li><a href="#collections">Buffets &amp; Rangements</a></li>
+          <li><a href="#collections">Meubles TV</a></li>
+          <li><a href="#collections">Jardins &amp; Terrasses</a></li>
+          <li><a href="#collections">Statuettes déco</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="f-contact-row">
+          <i class='bx bx-map-pin'></i>
+          <span>8 rue de la Cocoteraie<br>97440 Saint-André, La Réunion</span>
+        </div>
+        <div class="f-contact-row">
+          <i class='bx bx-envelope'></i>
+          <span>maisonexotik974@gmail.com</span>
+        </div>
+        <div class="f-contact-row">
+          <i class='bx bx-time'></i>
+          <span>Lundi : 13h30 – 17h30<br>Mar – Sam : 9h – 12h | 13h30 – 17h30<br>Dimanche : fermé</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Maison Exotik · Saint-André, La Réunion · Tous droits réservés</p>
+      <p>Conçu avec soin · <a href="http://Dextersol.com">Dextersol</a></p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    /* ── Navbar scroll ── */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile nav ── */
+    const toggle   = document.getElementById('navToggle');
+    const overlay  = document.getElementById('mobileOverlay');
+    toggle.addEventListener('click', () => {
+      const open = toggle.classList.toggle('open');
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    overlay.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ── Hero Swiper ── */
+    const heroSwiper = new Swiper('#heroSwiper', {
+      loop: true,
+      autoplay: { delay: 4500, disableOnInteraction: false },
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      speed: 900,
+      navigation: { nextEl: '#heroNext', prevEl: '#heroPrev' },
+      on: {
+        slideChange() {
+          const idx = String(this.realIndex + 1).padStart(2, '0');
+          document.getElementById('heroCurrentSlide').textContent = idx;
+        }
+      }
+    });
+
+    /* ── Product Swiper ── */
+    new Swiper('#prodSwiper', {
+      loop: true,
+      autoplay: { delay: 3800, disableOnInteraction: false },
+      speed: 800,
+      spaceBetween: 20,
+      slidesPerView: 1.1,
+      navigation: { nextEl: '#prodNext', prevEl: '#prodPrev' },
+      breakpoints: {
+        640:  { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 24 },
+        1280: { slidesPerView: 3.3, spaceBetween: 28 }
+      }
+    });
+
+    /* ── Scroll reveal ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
-
 </html>

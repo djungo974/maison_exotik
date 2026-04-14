@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Studio — Architecture New York</title>
+  <meta name="description" content="Nexus Studio, cabinet d'architecture basé à New York. Design architectural, intérieur &amp; espace, conseil urbanisme, direction de projet." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --bg: #EBF4FA;
+      --white: #FFFFFF;
+      --dark: #1A1A2E;
+      --text: #1A1A2E;
+      --muted: #6B7A8D;
+      --accent: #FF6B2B;
+      --border: #CBD8E1;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% {
+        transform: scaleY(1);
+        opacity: 0.4;
+      }
+      50% {
+        transform: scaleY(1.4);
+        opacity: 1;
+      }
+    }
+
+    /* ============================================================
+       REVEAL (IntersectionObserver)
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    #navbar.scrolled {
+      background: rgba(235, 244, 250, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 0.85rem 2.5rem;
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-logo .logo-main {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      color: var(--dark);
+    }
+
+    .nav-logo .logo-sub {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: 0.04em;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+      transform-origin: left;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-cta:hover {
+      background: #e85a1c;
+      transform: translateY(-1px);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--dark);
+      transition: all 0.3s ease;
+      border-radius: 1px;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-8px);
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile nav drawer */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--white);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-mobile.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .nav-mobile a {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--dark);
+      letter-spacing: 0.05em;
+      transition: color 0.2s ease;
+    }
+
+    .nav-mobile a:hover {
+      color: var(--accent);
+    }
+
+    .nav-mobile .btn-cta {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+      margin-top: 1rem;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=85&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,26,46,0.55) 0%, rgba(26,26,46,0.2) 60%, rgba(235,244,250,0.15) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      width: 100%;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6.5vw, 6.5rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title .reveal-line {
+      display: block;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero-title .reveal-line:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .hero-sub {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2.75rem;
+      animation: fadeUp 0.9s ease 0.3s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.9s ease 0.45s both;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e85a1c;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      animation: fadeUp 1s ease 0.8s both;
+    }
+
+    .scroll-indicator span {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.4);
+      transform-origin: top;
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    /* ============================================================
+       STATS
+    ============================================================ */
+    #stats {
+      background: var(--white);
+      padding: 3.5rem 2.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-number em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       PROJECTS
+    ============================================================ */
+    #projects {
+      background: var(--bg);
+      padding: 7rem 2.5rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-left 0.35s ease;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(26, 26, 46, 0.12);
+      border-left-color: var(--accent);
+    }
+
+    .project-card:hover .project-img img {
+      transform: scale(1.06);
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .project-img {
+      position: relative;
+      overflow: hidden;
+      height: 260px;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 46, 0.35);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .project-body {
+      padding: 1.5rem 1.75rem 2rem;
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-name {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .project-location {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .project-location::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 1px;
+      background: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services {
+      background: var(--white);
+      padding: 7rem 2.5rem;
+    }
+
+    .services-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .services-left {
+      position: sticky;
+      top: 6rem;
+    }
+
+    .services-left .section-label {
+      text-align: left;
+    }
+
+    .services-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+    }
+
+    .services-desc {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 380px;
+    }
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 3.5rem 1fr;
+      gap: 1.25rem;
+      align-items: start;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s ease;
+    }
+
+    .service-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .service-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--border);
+      line-height: 1;
+      padding-top: 3px;
+      transition: color 0.25s ease;
+    }
+
+    .service-item:hover .service-num {
+      color: var(--accent);
+    }
+
+    .service-name {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .service-desc {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       CTA BAND
+    ============================================================ */
+    #cta {
+      background: var(--dark);
+      padding: 8rem 2.5rem;
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-label {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-cta-large {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-cta-large:hover {
+      background: #e85a1c;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #contact {
+      background: #111120;
+      padding: 6rem 2.5rem 0;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr 1fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .footer-brand .logo-main {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      color: var(--white);
+    }
+
+    .footer-brand .logo-sub {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      margin-top: 1px;
+      display: block;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: 1.25rem;
+      line-height: 1.6;
+      max-width: 240px;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-col ul li a {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.2s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-contact-item {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.65;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-contact-item a {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.2s ease;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-social a {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-social a:hover {
+      color: var(--white);
+    }
+
+    .footer-social a::before {
+      content: '↗';
+      font-size: 0.7rem;
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.75rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.28);
+      letter-spacing: 0.04em;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+
+    /* < 900px */
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .services-left {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+    }
+
+    /* < 768px */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .btn-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-mobile {
+        display: flex;
+      }
+
+      #navbar {
+        padding: 1.1rem 1.5rem;
+      }
+
+      #navbar.scrolled {
+        padding: 0.85rem 1.5rem;
+      }
+
+      .hero-content {
+        padding: 0 1.5rem;
+      }
+
+      #projects,
+      #services,
+      #cta {
+        padding: 5rem 1.5rem;
+      }
+
+      #stats {
+        padding: 3rem 1.5rem;
+      }
+
+      #contact {
+        padding: 4rem 1.5rem 0;
+      }
+    }
+
+    /* < 600px */
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .stat-item:not(:last-child)::after {
+        display: none;
+      }
+
+      .stat-item:nth-child(1),
+      .stat-item:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1.5rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: fit-content;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <span class="logo-main">NEXUS</span>
+      <span class="logo-sub">STUDIO</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="btn-cta">Demander un devis</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <a href="#about" class="mobile-link">À propos</a>
+    <a href="#projects" class="mobile-link">Projets</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="btn-cta">Demander un devis</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-label">New York · Architecture Studio</span>
+
+      <h1 class="hero-title">
+        <span class="reveal-line">Redéfinir les espaces,</span>
+        <span class="reveal-line">élever les modes de vie.</span>
+      </h1>
+
+      <p class="hero-sub">Minimal. Moderne. Significatif.</p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Voir nos projets</a>
+        <a href="#about" class="btn-outline">Notre approche</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS
+  ============================================================ -->
+  <span id="about" style="display:block;height:0;visibility:hidden" aria-hidden="true"></span>
+  <section id="stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number">150<em>+</em></div>
+        <div class="stat-label">Projets réalisés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Ans d'expérience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Prix d'architecture</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Pays</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS
+  ============================================================ -->
+  <section id="projects">
+    <div class="section-inner">
+
+      <div class="section-header reveal">
+        <span class="section-label">Nos Réalisations</span>
+        <h2 class="section-title">Projets phares</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal" style="animation-delay: 0s;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&fit=crop" alt="One Hudson Loft, Manhattan" loading="lazy" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Résidentiel</span>
+            <h3 class="project-name">One Hudson Loft</h3>
+            <p class="project-location">Manhattan, New York</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal" style="animation-delay: 0.15s;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop" alt="Pacific Heights Residence, San Francisco" loading="lazy" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Luxe</span>
+            <h3 class="project-name">Pacific Heights Residence</h3>
+            <p class="project-location">San Francisco, Californie</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal" style="animation-delay: 0.3s;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80&fit=crop" alt="The Glass Atelier, Brooklyn" loading="lazy" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Commercial</span>
+            <h3 class="project-name">The Glass Atelier</h3>
+            <p class="project-location">Brooklyn, New York</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services">
+    <div class="services-layout">
+
+      <div class="services-left reveal">
+        <span class="section-label">Ce que nous faisons</span>
+        <h2 class="services-title">Une vision.<br>Une expertise.</h2>
+        <p class="services-desc">
+          Chez Nexus Studio, nous croyons que l'architecture est bien plus que des murs et des toits — c'est la création de conditions pour une vie épanouie. Chaque projet est abordé avec rigueur, sensibilité et une passion sincère pour le détail.
+        </p>
+      </div>
+
+      <div class="services-right reveal">
+        <ul class="services-list">
+
+          <li class="service-item">
+            <span class="service-num">01</span>
+            <div class="service-content">
+              <h3 class="service-name">Design Architectural</h3>
+              <p class="service-desc">De l'esquisse à la livraison, nous orchestrons chaque détail de votre bâtiment.</p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">02</span>
+            <div class="service-content">
+              <h3 class="service-name">Intérieur &amp; Espace</h3>
+              <p class="service-desc">Des intérieurs pensés pour la vie — chaleur, lumière et fonctionnalité en harmonie.</p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">03</span>
+            <div class="service-content">
+              <h3 class="service-name">Conseil Urbanisme</h3>
+              <p class="service-desc">Nous guidons vos projets à travers les réglementations et opportunités urbaines.</p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <span class="service-num">04</span>
+            <div class="service-content">
+              <h3 class="service-name">Direction de Projet</h3>
+              <p class="service-desc">Pilotage complet : délais, budget, qualité — sans compromis.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+  ============================================================ -->
+  <section id="cta">
+    <div class="cta-content reveal">
+      <span class="cta-label">Commençons</span>
+      <h2 class="cta-title">Prêt à transformer votre espace&nbsp;?</h2>
+      <a href="#contact" class="btn-cta-large">Parler à un architecte</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER / CONTACT
+  ============================================================ -->
+  <footer id="contact">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand footer-col">
+        <div>
+          <span class="logo-main">NEXUS</span>
+          <span class="logo-sub">STUDIO</span>
+        </div>
+        <p class="footer-tagline">Architecture moderne. Espaces intemporels.</p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-col">
+        <p class="footer-col-title">Navigation</p>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <p class="footer-contact-item">250 West 55th Street<br>New York, NY 10019</p>
+        <p class="footer-contact-item"><a href="mailto:hello@nexusstudio.com">hello@nexusstudio.com</a></p>
+        <p class="footer-contact-item"><a href="tel:+12125550180">+1 (212) 555-0180</a></p>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <p class="footer-col-title">Réseaux</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Behance">Behance</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Nexus Studio. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // ── Navbar scroll class ───────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ── Hamburger mobile menu ─────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('nav-mobile');
+    const mobileLinks = document.querySelectorAll('.mobile-link, #nav-mobile .btn-cta');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      navMobile.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      navMobile.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        navMobile.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── IntersectionObserver for .reveal elements ─────────────────
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Respect per-card delay set via inline style
+          const delay = entry.target.style.animationDelay || '0s';
+          entry.target.style.transitionDelay = delay;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

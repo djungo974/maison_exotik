@@ -151,6 +151,34 @@ const translations = {
     'footer.hours':           'Monday: 1:30pm – 5:30pm<br>Tue – Sat: 9am – 12pm | 1:30pm – 5:30pm<br>Sunday: closed',
     'footer.copyright':       '&copy; 2025 Maison Exotik · Saint-André, Réunion Island · All rights reserved',
 
+    /* ── About-us page ── */
+    'aboutPage.docTitle':       'Maison Exotik | About Us',
+    'aboutPage.brandTagline':   'Exotic charm at home',
+    'aboutPage.navHome':        'HOME',
+    'aboutPage.navAbout':       'About us',
+    'aboutPage.title':          'About us',
+    'aboutPage.p1':             'Welcome to Maison Exotik, your premier destination to discover a unique selection of exotic-wood furniture in the heart of Saint-André since 2009. Located at 8 rue de la Cocoteraie, 97440, our store embodies our passion and commitment to authenticity, quality, and durability for every piece we offer.',
+    'aboutPage.p2':             'At Maison Exotik, we celebrate the natural beauty and timeless elegance of teak, carefully selected for its superior quality and durability. Our collection — primarily furniture — is also enriched by a handful of decorative statuettes, each telling its own story of craftsmanship and tradition.',
+    'aboutPage.p3':             'We understand the importance of preserving our planet, which is why we contribute to ecological sustainability by paying an eco-tax on every piece sold. This gesture underlines our commitment to a greener and more responsible future, ensuring your choice at Maison Exotik is not just about style, but also a positive contribution to the environment.',
+    'aboutPage.p4':             'Aware of the importance of accessibility, we strive to offer our creations at affordable prices. We believe everyone deserves access to quality furniture, with no compromise on authenticity or durability.',
+    'aboutPage.p5':             'We invite you to discover our unique world by visiting our store. Please note that the photos on this site are non-contractual, reflecting our desire to give you the exclusive and personal experience of in-store discovery. Each piece is an invitation to explore the richness and diversity of exotic woods, available only on the sales floor.',
+    'aboutPage.p6':             'Join us at Maison Exotik for an adventure where nature meets craftsmanship, and let yourself be charmed by the warmth and character of our furniture — witnesses to a world where quality, beauty and responsibility come together. Your home deserves the very best, it deserves Maison Exotik.',
+    'aboutPage.hoursTitle':     'Opening hours',
+    'aboutPage.monday':         'Monday',
+    'aboutPage.mondayHours':    ': 1:30pm – 5:30pm',
+    'aboutPage.tuesday':        'Tuesday',
+    'aboutPage.tuesdayHours':   ': 9am – 12pm  1:30pm – 5:30pm',
+    'aboutPage.wednesday':      'Wednesday',
+    'aboutPage.wednesdayHours': ': 9am – 12pm  1:30pm – 5:30pm',
+    'aboutPage.thursday':       'Thursday',
+    'aboutPage.thursdayHours':  ': 9am – 12pm  1:30pm – 5:30pm',
+    'aboutPage.friday':         'Friday',
+    'aboutPage.fridayHours':    ': 9am – 12pm  1:30pm – 5:30pm',
+    'aboutPage.saturday':       'Saturday',
+    'aboutPage.saturdayHours':  ': 9am – 12pm  1:30pm – 5:30pm',
+    'aboutPage.sunday':         'Sunday',
+    'aboutPage.sundayHours':    ': Closed',
+
     /* ── Lang switcher ── */
     'langSwitch.label': 'Switch language'
   },
@@ -300,6 +328,34 @@ const translations = {
     'footer.hours':           'Lundi : 13h30 – 17h30<br>Mar – Sam : 9h – 12h | 13h30 – 17h30<br>Dimanche : fermé',
     'footer.copyright':       '&copy; 2025 Maison Exotik · Saint-André, La Réunion · Tous droits réservés',
 
+    /* ── About-us page ── */
+    'aboutPage.docTitle':       'Maison Exotik | À propos',
+    'aboutPage.brandTagline':   'Le Charme exotique à domicile',
+    'aboutPage.navHome':        'MAISON',
+    'aboutPage.navAbout':       'À propos de nous',
+    'aboutPage.title':          'À propos de nous',
+    'aboutPage.p1':             'Bienvenue chez Maison Exotik, votre destination privilégiée pour découvrir une sélection unique de meubles en bois exotiques au cœur de Saint André depuis 2009. Niché au 8 rue de la Cocoteraie, 97440, notre magasin incarne la passion et l\'engagement pour l\'authenticité, la qualité, et la durabilité de chaque pièce que nous proposons.',
+    'aboutPage.p2':             'Chez Maison Exotik, nous célébrons la beauté naturelle et l\'élégance intemporelle du teck, soigneusement sélectionné pour sa qualité supérieure et sa durabilité. Notre collection, principalement composée de meubles, s\'enrichit également de quelques statuettes de décoration, chacune racontant sa propre histoire d\'artisanat et de tradition.',
+    'aboutPage.p3':             'Nous comprenons l\'importance de préserver notre planète, c\'est pourquoi nous contribuons à la durabilité écologique en payant une éco-taxe pour chaque pièce vendue. Ce geste souligne notre engagement envers un avenir plus vert et plus responsable, assurant que votre choix chez Maison Exotik ne soit pas seulement une question de style, mais aussi une contribution positive à l\'environnement.',
+    'aboutPage.p4':             'Conscients de l\'importance de l\'accessibilité, nous nous efforçons de proposer nos créations à des prix abordables. Nous croyons que chacun mérite d\'accéder à des meubles de qualité, sans compromis sur l\'authenticité ou la durabilité.',
+    'aboutPage.p5':             'Nous vous invitons à découvrir notre univers unique en visitant notre magasin. Veuillez noter que les photos sur ce site sont non contractuelles, reflétant notre désir de vous faire vivre l\'expérience exclusive et personnelle de la découverte en magasin. Chaque pièce est une invitation à explorer la richesse et la diversité des bois exotiques, disponibles uniquement en surface de vente.',
+    'aboutPage.p6':             'Rejoignez-nous à Maison Exotik pour une aventure où la nature rencontre l\'artisanat, et laissez-vous séduire par la chaleur et le caractère de nos meubles, témoins d\'un monde où qualité, beauté, et responsabilité se rencontrent. Votre intérieur mérite ce qu\'il y a de meilleur, il mérite Maison Exotik.',
+    'aboutPage.hoursTitle':     'Horaires d\'ouvertures',
+    'aboutPage.monday':         'Lundi',
+    'aboutPage.mondayHours':    ' : 13h30 - 17h30',
+    'aboutPage.tuesday':        'Mardi',
+    'aboutPage.tuesdayHours':   ' : 9h - 12h 13h30 - 17h30',
+    'aboutPage.wednesday':      'Mercredi',
+    'aboutPage.wednesdayHours': ' : 9h - 12h 13h30 - 17h30',
+    'aboutPage.thursday':       'Jeudi',
+    'aboutPage.thursdayHours':  ' : 9h - 12h 13h30 - 17h30',
+    'aboutPage.friday':         'Vendredi',
+    'aboutPage.fridayHours':    ' : 9h - 12h 13h30 - 17h30',
+    'aboutPage.saturday':       'Samedi',
+    'aboutPage.saturdayHours':  ' : 9h - 12h 13h30 - 17h30',
+    'aboutPage.sunday':         'Dimanche',
+    'aboutPage.sundayHours':    ' : Fermé',
+
     /* ── Lang switcher ── */
     'langSwitch.label': 'Changer de langue'
   }
@@ -328,9 +384,12 @@ function applyTranslations(lang) {
   });
 
   // <title> + <meta description>
-  if (dict['doc.title']) document.title = dict['doc.title'];
+  // Allow per-page override via <html data-i18n-doc-title="..." data-i18n-doc-desc="...">
+  const titleKey = document.documentElement.getAttribute('data-i18n-doc-title') || 'doc.title';
+  const descKey  = document.documentElement.getAttribute('data-i18n-doc-desc')  || 'doc.description';
+  if (dict[titleKey]) document.title = dict[titleKey];
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc && dict['doc.description']) metaDesc.setAttribute('content', dict['doc.description']);
+  if (metaDesc && dict[descKey]) metaDesc.setAttribute('content', dict[descKey]);
 
   // <html lang>
   document.documentElement.lang = lang;

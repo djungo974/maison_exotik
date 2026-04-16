@@ -179,6 +179,65 @@ const translations = {
     'aboutPage.sunday':         'Sunday',
     'aboutPage.sundayHours':    ': Closed',
 
+    /* ── Nexus Studio page ── */
+    'nexus.docTitle':           'Nexus Studio — Architecture, New York',
+    'nexus.docDescription':     'Nexus Studio, an architecture practice based in New York. Architectural design, interior & space, urban consulting, project management.',
+
+    'nexus.nav.about':          'About',
+    'nexus.nav.projects':       'Projects',
+    'nexus.nav.services':       'Services',
+    'nexus.nav.contact':        'Contact',
+    'nexus.nav.cta':            'Request a quote',
+    'nexus.nav.menuOpen':       'Open menu',
+
+    'nexus.hero.label':         'New York · Architecture Studio',
+    'nexus.hero.title1':        'Redefining spaces,',
+    'nexus.hero.title2':        'elevating ways of living.',
+    'nexus.hero.sub':           'Minimal. Modern. Meaningful.',
+    'nexus.hero.btnPrimary':    'See our projects',
+    'nexus.hero.btnOutline':    'Our approach',
+    'nexus.hero.scroll':        'Scroll',
+
+    'nexus.stats.s1Lbl':        'Completed projects',
+    'nexus.stats.s2Lbl':        'Years of experience',
+    'nexus.stats.s3Lbl':        'Architecture awards',
+    'nexus.stats.s4Lbl':        'Countries',
+
+    'nexus.projects.label':     'Our work',
+    'nexus.projects.title':     'Featured projects',
+    'nexus.projects.tag1':      'Residential',
+    'nexus.projects.name1':     'One Hudson Loft',
+    'nexus.projects.loc1':      'Manhattan, New York',
+    'nexus.projects.tag2':      'Luxury',
+    'nexus.projects.name2':     'Pacific Heights Residence',
+    'nexus.projects.loc2':      'San Francisco, California',
+    'nexus.projects.tag3':      'Commercial',
+    'nexus.projects.name3':     'The Glass Atelier',
+    'nexus.projects.loc3':      'Brooklyn, New York',
+
+    'nexus.services.label':     'What we do',
+    'nexus.services.title':     'One vision.<br>One expertise.',
+    'nexus.services.desc':      'At Nexus Studio, we believe that architecture is much more than walls and roofs — it\'s the creation of conditions for a thriving life. Every project is approached with rigor, sensitivity and a genuine passion for detail.',
+    'nexus.services.s1Name':    'Architectural Design',
+    'nexus.services.s1Desc':    'From sketch to delivery, we orchestrate every detail of your building.',
+    'nexus.services.s2Name':    'Interior &amp; Space',
+    'nexus.services.s2Desc':    'Interiors designed for living — warmth, light and functionality in harmony.',
+    'nexus.services.s3Name':    'Urban Consulting',
+    'nexus.services.s3Desc':    'We guide your projects through urban regulations and opportunities.',
+    'nexus.services.s4Name':    'Project Management',
+    'nexus.services.s4Desc':    'End-to-end oversight: timelines, budget, quality — no compromise.',
+
+    'nexus.cta.label':          'Let\'s begin',
+    'nexus.cta.title':          'Ready to transform your space?',
+    'nexus.cta.btn':            'Talk to an architect',
+
+    'nexus.footer.tagline':     'Modern architecture. Timeless spaces.',
+    'nexus.footer.navTitle':    'Navigation',
+    'nexus.footer.contactTitle':'Contact',
+    'nexus.footer.address':     '250 West 55th Street<br>New York, NY 10019',
+    'nexus.footer.socialTitle': 'Social',
+    'nexus.footer.copyright':   '&copy; 2026 Nexus Studio. All rights reserved.',
+
     /* ── Lang switcher ── */
     'langSwitch.label': 'Switch language'
   },
@@ -355,6 +414,65 @@ const translations = {
     'aboutPage.saturdayHours':  ' : 9h - 12h 13h30 - 17h30',
     'aboutPage.sunday':         'Dimanche',
     'aboutPage.sundayHours':    ' : Fermé',
+
+    /* ── Nexus Studio page ── */
+    'nexus.docTitle':           'Nexus Studio — Architecture, New York',
+    'nexus.docDescription':     'Nexus Studio, cabinet d\'architecture basé à New York. Design architectural, intérieur & espace, conseil urbanisme, direction de projet.',
+
+    'nexus.nav.about':          'À propos',
+    'nexus.nav.projects':       'Projets',
+    'nexus.nav.services':       'Services',
+    'nexus.nav.contact':        'Contact',
+    'nexus.nav.cta':            'Demander un devis',
+    'nexus.nav.menuOpen':       'Ouvrir le menu',
+
+    'nexus.hero.label':         'New York · Architecture Studio',
+    'nexus.hero.title1':        'Redéfinir les espaces,',
+    'nexus.hero.title2':        'élever les modes de vie.',
+    'nexus.hero.sub':           'Minimal. Moderne. Significatif.',
+    'nexus.hero.btnPrimary':    'Voir nos projets',
+    'nexus.hero.btnOutline':    'Notre approche',
+    'nexus.hero.scroll':        'Défiler',
+
+    'nexus.stats.s1Lbl':        'Projets réalisés',
+    'nexus.stats.s2Lbl':        'Ans d\'expérience',
+    'nexus.stats.s3Lbl':        'Prix d\'architecture',
+    'nexus.stats.s4Lbl':        'Pays',
+
+    'nexus.projects.label':     'Nos Réalisations',
+    'nexus.projects.title':     'Projets phares',
+    'nexus.projects.tag1':      'Résidentiel',
+    'nexus.projects.name1':     'One Hudson Loft',
+    'nexus.projects.loc1':      'Manhattan, New York',
+    'nexus.projects.tag2':      'Luxe',
+    'nexus.projects.name2':     'Pacific Heights Residence',
+    'nexus.projects.loc2':      'San Francisco, Californie',
+    'nexus.projects.tag3':      'Commercial',
+    'nexus.projects.name3':     'The Glass Atelier',
+    'nexus.projects.loc3':      'Brooklyn, New York',
+
+    'nexus.services.label':     'Ce que nous faisons',
+    'nexus.services.title':     'Une vision.<br>Une expertise.',
+    'nexus.services.desc':      'Chez Nexus Studio, nous croyons que l\'architecture est bien plus que des murs et des toits — c\'est la création de conditions pour une vie épanouie. Chaque projet est abordé avec rigueur, sensibilité et une passion sincère pour le détail.',
+    'nexus.services.s1Name':    'Design Architectural',
+    'nexus.services.s1Desc':    'De l\'esquisse à la livraison, nous orchestrons chaque détail de votre bâtiment.',
+    'nexus.services.s2Name':    'Intérieur &amp; Espace',
+    'nexus.services.s2Desc':    'Des intérieurs pensés pour la vie — chaleur, lumière et fonctionnalité en harmonie.',
+    'nexus.services.s3Name':    'Conseil Urbanisme',
+    'nexus.services.s3Desc':    'Nous guidons vos projets à travers les réglementations et opportunités urbaines.',
+    'nexus.services.s4Name':    'Direction de Projet',
+    'nexus.services.s4Desc':    'Pilotage complet : délais, budget, qualité — sans compromis.',
+
+    'nexus.cta.label':          'Commençons',
+    'nexus.cta.title':          'Prêt à transformer votre espace ?',
+    'nexus.cta.btn':            'Parler à un architecte',
+
+    'nexus.footer.tagline':     'Architecture moderne. Espaces intemporels.',
+    'nexus.footer.navTitle':    'Navigation',
+    'nexus.footer.contactTitle':'Contact',
+    'nexus.footer.address':     '250 West 55th Street<br>New York, NY 10019',
+    'nexus.footer.socialTitle': 'Réseaux',
+    'nexus.footer.copyright':   '&copy; 2026 Nexus Studio. Tous droits réservés.',
 
     /* ── Lang switcher ── */
     'langSwitch.label': 'Changer de langue'

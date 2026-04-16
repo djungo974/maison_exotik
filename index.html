@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Maison Exotik — Meubles en teck sculpté, style exotique, éco-responsable. Saint-André, La Réunion.">
-  <meta name="keywords" content="meubles teck, meuble exotique, salon teck, table teck, saint-andré réunion, éco-responsable">
-  <title>Maison Exotik | Meubles en Teck Sculpté — Saint-André, La Réunion</title>
+  <meta name="description" content="Maison Exotik — Hand-carved teak furniture, exotic style, eco-responsible. Saint-André, Réunion Island.">
+  <meta name="keywords" content="meubles teck, meuble exotique, salon teck, table teck, saint-andré réunion, éco-responsable, teak furniture, exotic furniture, reunion island">
+  <title>Maison Exotik | Carved Teak Furniture — Saint-André, Réunion Island</title>
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,30 +28,33 @@
       <a href="index.html">
         <img src="./assets/images/logo.png" alt="Maison Exotik">
       </a>
-      <div class="nav-tagline">Le charme exotique<br>à domicile</div>
+      <div class="nav-tagline" data-i18n="nav.tagline">Exotic charm<br>at home</div>
     </div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
-      <li><a href="about-us.html">Notre histoire</a></li>
-      <li><a href="#collections">Collections</a></li>
-      <li><a href="#eco">Éco-responsable</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+      <li><a href="about-us.html" data-i18n="nav.about">Our story</a></li>
+      <li><a href="#collections" data-i18n="nav.collections">Collections</a></li>
+      <li><a href="#eco" data-i18n="nav.eco">Eco-responsible</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-links nav-cta">
-      <i class='bx bx-map-pin'></i> Nous trouver
+    <a href="#contact" class="nav-links nav-cta" data-i18n="nav.findUs">
+      <i class='bx bx-map-pin'></i> Find us
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <button class="lang-switch" id="langSwitch" aria-label="Switch language" data-i18n-attr="aria-label:langSwitch.label">
+      <span class="lang-en">EN</span><span class="lang-sep">|</span><span class="lang-fr lang-inactive">FR</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" data-i18n-attr="aria-label:nav.menuLabel">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- Mobile overlay -->
   <div class="mobile-overlay" id="mobileOverlay">
-    <a href="index.html">Accueil</a>
-    <a href="about-us.html">Notre histoire</a>
-    <a href="#collections">Collections</a>
-    <a href="#eco">Éco-responsable</a>
-    <a href="#contact">Nous trouver</a>
+    <a href="index.html" data-i18n="mobile.home">Home</a>
+    <a href="about-us.html" data-i18n="mobile.about">Our story</a>
+    <a href="#collections" data-i18n="mobile.collections">Collections</a>
+    <a href="#eco" data-i18n="mobile.eco">Eco-responsible</a>
+    <a href="#contact" data-i18n="mobile.contact">Find us</a>
   </div>
 
   <!-- ═══════════════════════════════════════════════════
@@ -64,30 +67,30 @@
       <div class="hero-left-content">
         <div class="hero-eyebrow">
           <span class="hero-eyebrow-dot"></span>
-          Teck Exotique · Sculpté à la Main · Depuis 2009
+          <span data-i18n="hero.eyebrow">Exotic Teak · Hand-Carved · Since 2009</span>
         </div>
-        <h1 class="hero-title">
-          Le Charme<br><em>Exotique</em><br>à domicile
+        <h1 class="hero-title" data-i18n="hero.title">
+          Exotic<br><em>Charm</em><br>at home
         </h1>
-        <p class="hero-sub">
-          Des pièces sculptées à la main par des maîtres artisans,
-          sélectionnées pour leur authenticité, leur durabilité et leur âme.
+        <p class="hero-sub" data-i18n="hero.sub">
+          Pieces hand-carved by master artisans,
+          selected for their authenticity, durability and soul.
         </p>
         <div class="hero-actions">
           <a href="#collections" class="btn-gold">
-            Découvrir nos collections
+            <span data-i18n="hero.btnDiscover">Discover our collections</span>
             <span class="btn-arrow">
               <i class='bx bx-right-arrow-alt'></i>
             </span>
           </a>
-          <a href="about-us.html" class="btn-ghost">
-            Notre histoire
+          <a href="about-us.html" class="btn-ghost" data-i18n="hero.btnStory">
+            Our story
           </a>
         </div>
       </div>
       <div class="hero-scroll-hint">
         <div class="scroll-line"></div>
-        <span class="scroll-text">Défiler</span>
+        <span class="scroll-text" data-i18n="hero.scroll">Scroll</span>
       </div>
     </div>
 
@@ -115,15 +118,15 @@
       </div>
       <!-- Nav buttons -->
       <div class="hero-nav-wrap">
-        <button class="hero-nav-btn" id="heroPrev" aria-label="Précédent">
+        <button class="hero-nav-btn" id="heroPrev" aria-label="Previous" data-i18n-attr="aria-label:hero.prevLabel">
           <i class='bx bx-chevron-left'></i>
         </button>
-        <button class="hero-nav-btn" id="heroNext" aria-label="Suivant">
+        <button class="hero-nav-btn" id="heroNext" aria-label="Next" data-i18n-attr="aria-label:hero.nextLabel">
           <i class='bx bx-chevron-right'></i>
         </button>
       </div>
       <!-- Badge -->
-      <div class="hero-badge">Éco-certifié</div>
+      <div class="hero-badge" data-i18n="hero.badge">Eco-certified</div>
     </div>
   </section>
 
@@ -133,20 +136,20 @@
   <div class="marquee-bar">
     <div class="marquee-track">
       <!-- duplicated for infinite loop -->
-      <span class="marquee-item">Teck Exotique Certifié</span>
-      <span class="marquee-item">Artisanat d'Exception</span>
-      <span class="marquee-item">Éco-Responsable</span>
-      <span class="marquee-item">Saint-André · La Réunion</span>
-      <span class="marquee-item">Depuis 2009</span>
-      <span class="marquee-item">Sculpté à la Main</span>
-      <span class="marquee-item">Green Economy</span>
-      <span class="marquee-item">Teck Exotique Certifié</span>
-      <span class="marquee-item">Artisanat d'Exception</span>
-      <span class="marquee-item">Éco-Responsable</span>
-      <span class="marquee-item">Saint-André · La Réunion</span>
-      <span class="marquee-item">Depuis 2009</span>
-      <span class="marquee-item">Sculpté à la Main</span>
-      <span class="marquee-item">Green Economy</span>
+      <span class="marquee-item" data-i18n="marquee.1">Certified Exotic Teak</span>
+      <span class="marquee-item" data-i18n="marquee.2">Exceptional Craftsmanship</span>
+      <span class="marquee-item" data-i18n="marquee.3">Eco-Responsible</span>
+      <span class="marquee-item" data-i18n="marquee.4">Saint-André · Réunion Island</span>
+      <span class="marquee-item" data-i18n="marquee.5">Since 2009</span>
+      <span class="marquee-item" data-i18n="marquee.6">Hand-Carved</span>
+      <span class="marquee-item" data-i18n="marquee.7">Green Economy</span>
+      <span class="marquee-item" data-i18n="marquee.1">Certified Exotic Teak</span>
+      <span class="marquee-item" data-i18n="marquee.2">Exceptional Craftsmanship</span>
+      <span class="marquee-item" data-i18n="marquee.3">Eco-Responsible</span>
+      <span class="marquee-item" data-i18n="marquee.4">Saint-André · Réunion Island</span>
+      <span class="marquee-item" data-i18n="marquee.5">Since 2009</span>
+      <span class="marquee-item" data-i18n="marquee.6">Hand-Carved</span>
+      <span class="marquee-item" data-i18n="marquee.7">Green Economy</span>
     </div>
   </div>
 
@@ -155,26 +158,25 @@
   ════════════════════════════════════════════════════ -->
   <section class="about-teaser">
     <div class="about-left">
-      <span class="s-label reveal">Notre univers</span>
-      <h2 class="s-title reveal reveal-d1">
-        Le charme exotique<br>entre <em>chez vous</em>
+      <span class="s-label reveal" data-i18n="about.label">Our world</span>
+      <h2 class="s-title reveal reveal-d1" data-i18n="about.title">
+        Exotic charm<br>walks <em>into your home</em>
       </h2>
-      <p class="s-body reveal reveal-d2">
-        Bienvenue chez Maison Exotik, votre destination privilégiée pour découvrir
-        une sélection unique de meubles en teck sculpté au cœur de Saint-André
-        depuis 2009. Chaque pièce est soigneusement sélectionnée auprès de maîtres
-        artisans — garants de traditions millénaires et d'une excellence inégalée
-        dans le travail du bois.
+      <p class="s-body reveal reveal-d2" data-i18n="about.body">
+        Welcome to Maison Exotik, your premier destination to discover
+        a unique selection of carved teak furniture in the heart of Saint-André
+        since 2009. Each piece is carefully chosen from master artisans —
+        guardians of millennia-old traditions and unmatched excellence in woodworking.
       </p>
       <a href="about-us.html" class="btn-teak reveal reveal-d3" style="align-self:flex-start">
-        En savoir plus <i class='bx bx-right-arrow-alt' style="font-size:1.1rem"></i>
+        <span data-i18n="about.btn">Learn more</span> <i class='bx bx-right-arrow-alt' style="font-size:1.1rem"></i>
       </a>
     </div>
     <div class="about-right">
-      <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Buffet en teck sculpté">
+      <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Carved teak sideboard">
       <div class="about-floating-card">
-        <h4>Bois Exotique Certifié</h4>
-        <p>Artisanat traditionnel · Qualité supérieure</p>
+        <h4 data-i18n="about.cardTitle">Certified Exotic Wood</h4>
+        <p data-i18n="about.cardSub">Traditional craftsmanship · Premium quality</p>
       </div>
     </div>
   </section>
@@ -185,20 +187,20 @@
   <div class="stats-bar">
     <div class="stats-inner">
       <div class="stat reveal">
-        <div class="stat-num">2009</div>
-        <div class="stat-lbl">Fondé à Saint-André</div>
+        <div class="stat-num" data-i18n="stats.foundedNum">2009</div>
+        <div class="stat-lbl" data-i18n="stats.foundedLbl">Founded in Saint-André</div>
       </div>
       <div class="stat reveal reveal-d1">
-        <div class="stat-num">100%</div>
-        <div class="stat-lbl">Teck Certifié</div>
+        <div class="stat-num" data-i18n="stats.teckNum">100%</div>
+        <div class="stat-lbl" data-i18n="stats.teckLbl">Certified Teak</div>
       </div>
       <div class="stat reveal reveal-d2">
-        <div class="stat-num">Teck</div>
-        <div class="stat-lbl">Bois exotique de qualité</div>
+        <div class="stat-num" data-i18n="stats.woodNum">Teak</div>
+        <div class="stat-lbl" data-i18n="stats.woodLbl">Premium exotic wood</div>
       </div>
       <div class="stat reveal reveal-d3">
-        <div class="stat-num">Éco</div>
-        <div class="stat-lbl">Green Economy engagée</div>
+        <div class="stat-num" data-i18n="stats.ecoNum">Eco</div>
+        <div class="stat-lbl" data-i18n="stats.ecoLbl">Committed Green Economy</div>
       </div>
     </div>
   </div>
@@ -208,49 +210,49 @@
   ════════════════════════════════════════════════════ -->
   <section class="collections-section" id="collections">
     <div class="collections-header">
-      <span class="s-label reveal">Nos collections</span>
-      <h2 class="s-title reveal reveal-d1">Meublé avec <em>caractère</em></h2>
-      <p class="reveal reveal-d2" style="font-size:.97rem;line-height:1.75;color:var(--text-muted);max-width:46ch;margin:0 auto">
-        Du salon à la terrasse, chaque pièce raconte l'histoire du teck exotique
-        et de ses artisans d'exception.
+      <span class="s-label reveal" data-i18n="collections.label">Our collections</span>
+      <h2 class="s-title reveal reveal-d1" data-i18n="collections.title">Furnished with <em>character</em></h2>
+      <p class="reveal reveal-d2" style="font-size:.97rem;line-height:1.75;color:var(--text-muted);max-width:46ch;margin:0 auto" data-i18n="collections.intro">
+        From the living room to the terrace, every piece tells the story of exotic teak
+        and its exceptional artisans.
       </p>
     </div>
     <div class="coll-grid">
       <!-- Card 1 (large) -->
       <div class="coll-card reveal">
-        <img src="./assets/images/wooden-sofa-chair.png" alt="Salons en teck">
+        <img src="./assets/images/wooden-sofa-chair.png" alt="Teak sofas">
         <div class="coll-overlay"></div>
         <div class="coll-info">
-          <span class="coll-tag">Collection phare</span>
-          <div class="coll-name">Salons &amp;<br>Canapés</div>
+          <span class="coll-tag" data-i18n="collections.tag1">Flagship collection</span>
+          <div class="coll-name" data-i18n="collections.name1">Sofas &amp;<br>Couches</div>
           <span class="coll-link">
-            Explorer
+            <span data-i18n="collections.explore">Explore</span>
             <span class="coll-link-arrow"><i class='bx bx-right-arrow-alt'></i></span>
           </span>
         </div>
       </div>
       <!-- Card 2 -->
       <div class="coll-card reveal reveal-d1">
-        <img src="./assets/images/cafe-bar-diner-paysage-ete.png" alt="Tables et jardins">
+        <img src="./assets/images/cafe-bar-diner-paysage-ete.png" alt="Tables and gardens">
         <div class="coll-overlay"></div>
         <div class="coll-info">
-          <span class="coll-tag">Extérieur</span>
-          <div class="coll-name">Tables &amp;<br>Jardins</div>
+          <span class="coll-tag" data-i18n="collections.tag2">Outdoor</span>
+          <div class="coll-name" data-i18n="collections.name2">Tables &amp;<br>Gardens</div>
           <span class="coll-link">
-            Explorer
+            <span data-i18n="collections.explore">Explore</span>
             <span class="coll-link-arrow"><i class='bx bx-right-arrow-alt'></i></span>
           </span>
         </div>
       </div>
       <!-- Card 3 -->
       <div class="coll-card reveal reveal-d2">
-        <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Rangements et buffets">
+        <img src="./assets/images/rubber-plant-wooden-sideboard-table.jpg" alt="Sideboards and storage">
         <div class="coll-overlay"></div>
         <div class="coll-info">
-          <span class="coll-tag">Intérieur</span>
-          <div class="coll-name">Buffets &amp;<br>Rangements</div>
+          <span class="coll-tag" data-i18n="collections.tag3">Indoor</span>
+          <div class="coll-name" data-i18n="collections.name3">Sideboards &amp;<br>Storage</div>
           <span class="coll-link">
-            Explorer
+            <span data-i18n="collections.explore">Explore</span>
             <span class="coll-link-arrow"><i class='bx bx-right-arrow-alt'></i></span>
           </span>
         </div>
@@ -266,10 +268,10 @@
       <source src="./assets/images/wood wax for natural and furniture polish.mp4" type="video/mp4">
     </video>
     <div class="video-band-overlay">
-      <h2>La beauté brute<br>du <em>teck naturel</em></h2>
-      <p>
-        Un bois noble qui se bonifie avec le temps, résistant aux intempéries
-        et aux années — l'essence même de l'artisanat exotique.
+      <h2 data-i18n="video.title">The raw beauty<br>of <em>natural teak</em></h2>
+      <p data-i18n="video.body">
+        A noble wood that ages beautifully over time, weather-resistant
+        and built to last — the very essence of exotic craftsmanship.
       </p>
     </div>
   </div>
@@ -280,16 +282,16 @@
   <section class="prod-carousel-section">
     <div class="prod-carousel-head">
       <div>
-        <span class="s-label reveal">Nos pièces maîtresses</span>
-        <h2 class="s-title reveal reveal-d1" style="color:var(--teak)">
-          Sélection <em>exclusive</em>
+        <span class="s-label reveal" data-i18n="prod.label">Our signature pieces</span>
+        <h2 class="s-title reveal reveal-d1" style="color:var(--teak)" data-i18n="prod.title">
+          <em>Exclusive</em> selection
         </h2>
       </div>
       <div class="prod-nav reveal">
-        <button class="prod-nav-btn" id="prodPrev" aria-label="Précédent">
+        <button class="prod-nav-btn" id="prodPrev" aria-label="Previous" data-i18n-attr="aria-label:prod.prevLabel">
           <i class='bx bx-chevron-left'></i>
         </button>
-        <button class="prod-nav-btn" id="prodNext" aria-label="Suivant">
+        <button class="prod-nav-btn" id="prodNext" aria-label="Next" data-i18n-attr="aria-label:prod.nextLabel">
           <i class='bx bx-chevron-right'></i>
         </button>
       </div>
@@ -363,16 +365,16 @@
     <div class="java-grid">
       <!-- Text -->
       <div class="java-text">
-        <span class="s-label reveal">L'origine</span>
-        <h2 class="s-title reveal reveal-d1">
-          Un bois d'exception,<br>un <em>savoir-faire</em><br>millénaire
+        <span class="s-label reveal" data-i18n="java.label">The origin</span>
+        <h2 class="s-title reveal reveal-d1" data-i18n="java.title">
+          An exceptional wood,<br>a millennia-old<br><em>craftsmanship</em>
         </h2>
-        <p class="s-body reveal reveal-d2">
-          Le teck est l'un des bois les plus précieux au monde, reconnu pour sa
-          densité, sa résistance naturelle à l'humidité, aux insectes et aux
-          intempéries. Maison Exotik sélectionne rigoureusement chaque pièce
-          auprès de maîtres artisans qui perpétuent des traditions séculaires
-          de sculpture sur bois — garantissant authenticité et longévité.
+        <p class="s-body reveal reveal-d2" data-i18n="java.body">
+          Teak is one of the most precious woods in the world, recognized for
+          its density, natural resistance to humidity, insects and weather.
+          Maison Exotik rigorously selects each piece from master artisans
+          who carry on centuries-old wood-carving traditions —
+          guaranteeing authenticity and longevity.
         </p>
         <div class="java-features reveal reveal-d3">
           <div class="java-feat">
@@ -380,8 +382,8 @@
               <i class='bx bx-leaf'></i>
             </div>
             <div class="java-feat-txt">
-              <h5>Teck Grade A</h5>
-              <p>Notre teck est récolté sur des plantations certifiées, garantissant une densité et une longévité exceptionnelles.</p>
+              <h5 data-i18n="java.feat1Title">Grade A Teak</h5>
+              <p data-i18n="java.feat1Body">Our teak is harvested from certified plantations, ensuring exceptional density and longevity.</p>
             </div>
           </div>
           <div class="java-feat">
@@ -389,8 +391,8 @@
               <i class='bx bx-cut'></i>
             </div>
             <div class="java-feat-txt">
-              <h5>Sculpture à la main</h5>
-              <p>Chaque motif est taillé au ciseau par des artisans formés depuis l'enfance aux traditions séculaires de la sculpture sur bois.</p>
+              <h5 data-i18n="java.feat2Title">Hand-carved</h5>
+              <p data-i18n="java.feat2Body">Every motif is chiseled by hand by artisans trained from childhood in centuries-old wood-carving traditions.</p>
             </div>
           </div>
           <div class="java-feat">
@@ -398,8 +400,8 @@
               <i class='bx bx-globe'></i>
             </div>
             <div class="java-feat-txt">
-              <h5>Directement importé</h5>
-              <p>Maison Exotik sélectionne chaque pièce en direct auprès des ateliers — sans intermédiaire pour préserver la qualité.</p>
+              <h5 data-i18n="java.feat3Title">Direct import</h5>
+              <p data-i18n="java.feat3Body">Maison Exotik selects each piece directly from the workshops — no middlemen, to preserve quality.</p>
             </div>
           </div>
         </div>
@@ -407,10 +409,10 @@
       <!-- Images -->
       <div class="java-imgs reveal">
         <div class="java-img-main">
-          <img src="./assets/images/vue-decoration-preside-maison-terrasse.png" alt="Artisanat exotique">
+          <img src="./assets/images/vue-decoration-preside-maison-terrasse.png" alt="Exotic craftsmanship">
         </div>
         <div class="java-img-inset">
-          <img src="./assets/images/image 2.png" alt="Sculpture teck exotique">
+          <img src="./assets/images/image 2.png" alt="Exotic teak carving">
         </div>
       </div>
     </div>
@@ -422,14 +424,14 @@
   <section class="eco-section" id="eco">
     <div class="eco-inner">
       <div class="eco-header">
-        <span class="s-label reveal">Engagement vert</span>
-        <h2 class="s-title reveal reveal-d1">
-          Commerce <em>responsable</em>,<br>planète préservée
+        <span class="s-label reveal" data-i18n="eco.label">Green commitment</span>
+        <h2 class="s-title reveal reveal-d1" data-i18n="eco.title">
+          Responsible <em>commerce</em>,<br>preserved planet
         </h2>
-        <p class="s-body reveal reveal-d2">
-          Choisir Maison Exotik, c'est choisir un mobilier qui respecte la forêt
-          et soutient une économie verte durable. Notre engagement écologique
-          est au cœur de chaque décision commerciale.
+        <p class="s-body reveal reveal-d2" data-i18n="eco.body">
+          Choosing Maison Exotik means choosing furniture that respects the forest
+          and supports a sustainable green economy. Our environmental commitment
+          is at the heart of every business decision.
         </p>
       </div>
 
@@ -442,8 +444,8 @@
               <path d="M16 10v8M12 14h8" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </span>
-          <h4>Forêts Certifiées</h4>
-          <p>Tout notre teck provient de plantations gérées durablement, certifiées par des organismes indépendants de contrôle forestier. Aucune forêt primaire n'est exploitée.</p>
+          <h4 data-i18n="eco.pillar1Title">Certified Forests</h4>
+          <p data-i18n="eco.pillar1Body">All our teak comes from sustainably managed plantations, certified by independent forestry-control organizations. No primary forest is exploited.</p>
         </div>
         <div class="eco-pillar reveal reveal-d1">
           <span class="eco-icon">
@@ -453,8 +455,8 @@
               <path d="M16 22v-6" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </span>
-          <h4>Green Economy</h4>
-          <p>Nous contribuons activement à l'économie verte en soutenant des ateliers artisanaux à taille humaine, favorisant des conditions de travail équitables et un commerce éthique.</p>
+          <h4 data-i18n="eco.pillar2Title">Green Economy</h4>
+          <p data-i18n="eco.pillar2Body">We actively contribute to the green economy by supporting human-scale artisan workshops, promoting fair working conditions and ethical commerce.</p>
         </div>
         <div class="eco-pillar reveal reveal-d2">
           <span class="eco-icon">
@@ -463,40 +465,40 @@
               <path d="M16 14v6M16 22v1" stroke="#C9921A" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </span>
-          <h4>Transport Raisonné</h4>
-          <p>Nos containers de fret maritime sont optimisés pour minimiser l'empreinte carbone. Nous privilégions les livraisons groupées et les emballages recyclables.</p>
+          <h4 data-i18n="eco.pillar3Title">Mindful Transport</h4>
+          <p data-i18n="eco.pillar3Body">Our maritime freight containers are optimized to minimize the carbon footprint. We favor grouped deliveries and recyclable packaging.</p>
         </div>
       </div>
 
       <!-- Eco-tax info box -->
       <div class="eco-tax-box reveal">
         <div class="eco-tax-text">
-          <h3>L'<em>éco-taxe</em><br>pour un futur vert</h3>
-          <p>
-            En France et à La Réunion, une éco-taxe est perçue sur les meubles neufs
-            importés. Cette contribution — intégrée dans nos prix — est reversée à
-            l'éco-organisme <strong style="color:rgba(253,251,247,.75)">Éco-mobilier</strong>,
-            qui finance la collecte, le tri et le recyclage des meubles en fin de vie
-            sur tout le territoire.
+          <h3 data-i18n="ecoTax.title">The <em>eco-tax</em><br>for a green future</h3>
+          <p data-i18n="ecoTax.body1">
+            In France and on Réunion Island, an eco-tax is collected on new imported furniture.
+            This contribution — included in our prices — is paid to the eco-organization
+            <strong style="color:rgba(253,251,247,.75)">Éco-mobilier</strong>,
+            which finances the collection, sorting and recycling of end-of-life furniture
+            across the territory.
           </p>
-          <p style="margin-top:1rem;">
-            Chez Maison Exotik, nous ne nous contentons pas de respecter cette obligation :
-            nous la valorisons. C'est notre façon concrète de participer à l'économie
-            circulaire et de vous offrir un achat pleinement responsable.
+          <p style="margin-top:1rem;" data-i18n="ecoTax.body2">
+            At Maison Exotik, we don't just comply with this obligation: we embrace it.
+            It's our concrete way of taking part in the circular economy and offering
+            you a fully responsible purchase.
           </p>
         </div>
         <div class="eco-tax-stats">
           <div>
             <div class="eco-stat-num">100%</div>
-            <div class="eco-stat-lbl">Éco-taxe reversée</div>
+            <div class="eco-stat-lbl" data-i18n="ecoTax.stat1Lbl">Eco-tax forwarded</div>
           </div>
           <div>
             <div class="eco-stat-num">0</div>
-            <div class="eco-stat-lbl">Forêt primaire exploitée</div>
+            <div class="eco-stat-lbl" data-i18n="ecoTax.stat2Lbl">Primary forest exploited</div>
           </div>
           <div>
-            <div class="eco-stat-num">♻</div>
-            <div class="eco-stat-lbl">Économie circulaire</div>
+            <div class="eco-stat-num">&#9851;</div>
+            <div class="eco-stat-lbl" data-i18n="ecoTax.stat3Lbl">Circular economy</div>
           </div>
         </div>
       </div>
@@ -508,40 +510,40 @@
   ════════════════════════════════════════════════════ -->
   <section class="cta-band" id="contact">
     <div class="cta-inner">
-      <span class="s-label reveal">Venez nous voir</span>
-      <h2 class="reveal reveal-d1">
-        Vivez l'expérience<br><em>en magasin</em>
+      <span class="s-label reveal" data-i18n="cta.label">Come visit us</span>
+      <h2 class="reveal reveal-d1" data-i18n="cta.title">
+        Live the experience<br><em>in store</em>
       </h2>
-      <p class="reveal reveal-d2">
-        Les photos ne rendent pas justice à la chaleur et au grain du teck.
-        Venez toucher, sentir et vous installer dans nos pièces.
-        Notre équipe vous accueille à Saint-André.
+      <p class="reveal reveal-d2" data-i18n="cta.body">
+        Photos don't do justice to the warmth and grain of teak.
+        Come touch, smell and settle into our pieces.
+        Our team welcomes you in Saint-André.
       </p>
       <div class="cta-info-row">
         <div class="cta-info-item reveal">
           <div class="cta-info-ico"><i class='bx bx-map-pin'></i></div>
           <div class="cta-info-txt">
-            <strong>Adresse</strong>
-            <span>8 rue de la Cocoteraie, 97440 Saint-André</span>
+            <strong data-i18n="cta.addressLbl">Address</strong>
+            <span data-i18n="cta.addressVal">8 rue de la Cocoteraie, 97440 Saint-André</span>
           </div>
         </div>
         <div class="cta-info-item reveal reveal-d1">
           <div class="cta-info-ico"><i class='bx bx-time'></i></div>
           <div class="cta-info-txt">
-            <strong>Horaires</strong>
-            <span>Lun : 13h30–17h30 · Mar–Sam : 9h–12h &amp; 13h30–17h30</span>
+            <strong data-i18n="cta.hoursLbl">Hours</strong>
+            <span data-i18n="cta.hoursVal">Mon: 1:30pm–5:30pm · Tue–Sat: 9am–12pm &amp; 1:30pm–5:30pm</span>
           </div>
         </div>
         <div class="cta-info-item reveal reveal-d2">
           <div class="cta-info-ico"><i class='bx bx-envelope'></i></div>
           <div class="cta-info-txt">
-            <strong>Contact</strong>
-            <span>maisonexotik974@gmail.com</span>
+            <strong data-i18n="cta.contactLbl">Contact</strong>
+            <span data-i18n="cta.contactVal">maisonexotik974@gmail.com</span>
           </div>
         </div>
       </div>
       <a href="about-us.html" class="btn-teak reveal reveal-d3">
-        Voir le plan &amp; horaires <i class='bx bx-right-arrow-alt' style="font-size:1.15rem"></i>
+        <span data-i18n="cta.btn">See map &amp; hours</span> <i class='bx bx-right-arrow-alt' style="font-size:1.15rem"></i>
       </a>
     </div>
   </section>
@@ -554,7 +556,7 @@
       <!-- Brand -->
       <div class="footer-brand">
         <img class="footer-brand-img" src="./assets/images/footer_logo.svg" alt="Maison Exotik">
-        <p>Meubles en teck sculpté, artisanat d'exception. Le charme exotique à domicile depuis 2009.</p>
+        <p data-i18n="footer.tagline">Carved teak furniture, exceptional craftsmanship. Exotic charm at home since 2009.</p>
         <div class="footer-socials">
           <a href="https://www.facebook.com/maisonexotik" class="f-social" aria-label="Facebook">
             <i class='bx bxl-facebook'></i>
@@ -567,55 +569,56 @@
 
       <!-- Navigation -->
       <div class="footer-col">
-        <h5>Navigation</h5>
+        <h5 data-i18n="footer.navTitle">Navigation</h5>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about-us.html">Notre histoire</a></li>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#eco">Éco-responsable</a></li>
-          <li><a href="#contact">Nous trouver</a></li>
+          <li><a href="index.html" data-i18n="footer.navHome">Home</a></li>
+          <li><a href="about-us.html" data-i18n="footer.navAbout">Our story</a></li>
+          <li><a href="#collections" data-i18n="footer.navCollections">Collections</a></li>
+          <li><a href="#eco" data-i18n="footer.navEco">Eco-responsible</a></li>
+          <li><a href="#contact" data-i18n="footer.navContact">Find us</a></li>
         </ul>
       </div>
 
       <!-- Collections -->
       <div class="footer-col">
-        <h5>Collections</h5>
+        <h5 data-i18n="footer.collectionsTitle">Collections</h5>
         <ul>
-          <li><a href="#collections">Salons &amp; Canapés</a></li>
-          <li><a href="#collections">Tables de salle à manger</a></li>
-          <li><a href="#collections">Buffets &amp; Rangements</a></li>
-          <li><a href="#collections">Meubles TV</a></li>
-          <li><a href="#collections">Jardins &amp; Terrasses</a></li>
-          <li><a href="#collections">Statuettes déco</a></li>
+          <li><a href="#collections" data-i18n="footer.coll1">Sofas &amp; Couches</a></li>
+          <li><a href="#collections" data-i18n="footer.coll2">Dining tables</a></li>
+          <li><a href="#collections" data-i18n="footer.coll3">Sideboards &amp; Storage</a></li>
+          <li><a href="#collections" data-i18n="footer.coll4">TV units</a></li>
+          <li><a href="#collections" data-i18n="footer.coll5">Gardens &amp; Terraces</a></li>
+          <li><a href="#collections" data-i18n="footer.coll6">Decorative statuettes</a></li>
         </ul>
       </div>
 
       <!-- Contact -->
       <div class="footer-col">
-        <h5>Contact</h5>
+        <h5 data-i18n="footer.contactTitle">Contact</h5>
         <div class="f-contact-row">
           <i class='bx bx-map-pin'></i>
-          <span>8 rue de la Cocoteraie<br>97440 Saint-André, La Réunion</span>
+          <span data-i18n="footer.address">8 rue de la Cocoteraie<br>97440 Saint-André, Réunion Island</span>
         </div>
         <div class="f-contact-row">
           <i class='bx bx-envelope'></i>
-          <span>maisonexotik974@gmail.com</span>
+          <span data-i18n="footer.email">maisonexotik974@gmail.com</span>
         </div>
         <div class="f-contact-row">
           <i class='bx bx-time'></i>
-          <span>Lundi : 13h30 – 17h30<br>Mar – Sam : 9h – 12h | 13h30 – 17h30<br>Dimanche : fermé</span>
+          <span data-i18n="footer.hours">Monday: 1:30pm – 5:30pm<br>Tue – Sat: 9am – 12pm | 1:30pm – 5:30pm<br>Sunday: closed</span>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Maison Exotik · Saint-André, La Réunion · Tous droits réservés</p>
+      <p data-i18n="footer.copyright">&copy; 2025 Maison Exotik · Saint-André, Réunion Island · All rights reserved</p>
     </div>
   </footer>
 
   <!-- ═══════════════════════════════════════════════════
        SCRIPTS
   ════════════════════════════════════════════════════ -->
+  <script src="./assets/js/i18n.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     /* ── Navbar scroll ── */

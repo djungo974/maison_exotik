@@ -314,10 +314,44 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=85&fit=crop');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      opacity: 0;
+      will-change: transform, opacity;
+      animation: kenBurns 24s ease-in-out infinite;
+    }
+
+    .hero-bg-1 {
+      background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=85&fit=crop');
+      animation-delay: 0s;
+    }
+    .hero-bg-2 {
+      background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85&fit=crop');
+      animation-delay: -8s;
+    }
+    .hero-bg-3 {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85&fit=crop');
+      animation-delay: -16s;
+    }
+
+    @keyframes kenBurns {
+      0%   { opacity: 0; transform: scale(1.00) translate(0%, 0%); }
+      8%   { opacity: 1; }
+      33%  { opacity: 1; }
+      41%  { opacity: 0; }
+      100% { opacity: 0; transform: scale(1.15) translate(-2%, -1%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg {
+        animation: none;
+        opacity: 1;
+      }
+      .hero-bg-2,
+      .hero-bg-3 {
+        display: none;
+      }
     }
 
     .hero-overlay {
@@ -1073,7 +1107,9 @@
        HERO
   ============================================================ -->
   <section id="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg hero-bg-1"></div>
+    <div class="hero-bg hero-bg-2"></div>
+    <div class="hero-bg hero-bg-3"></div>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">

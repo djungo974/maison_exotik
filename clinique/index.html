@@ -148,7 +148,7 @@
   </section>
 
   <!-- ═══════════ TRUST BAR ═══════════ -->
-  <section class="trust-bar" id="trust" aria-label="Points de confiance">
+  <section class="trust-bar reveal" id="trust" aria-label="Points de confiance">
     <div class="container trust-bar__inner">
       <span class="trust-item">
         <span class="trust-item__icon" aria-hidden="true">
@@ -198,7 +198,7 @@
   <!-- ═══════════ ABOUT TEASER ═══════════ -->
   <section class="section about" id="about">
     <div class="container">
-      <div class="about__grid">
+      <div class="about__grid reveal reveal--stagger">
         <div class="about__content">
           <span class="eyebrow" data-i18n="about.eyebrow">Notre cabinet</span>
           <h2 data-i18n="about.title">Une pratique<br><em>bienveillante</em> et rigoureuse</h2>
@@ -243,7 +243,7 @@
   <!-- ═══════════ SERVICES PREVIEW ═══════════ -->
   <section class="section section--alt" id="services">
     <div class="container">
-      <div class="services__head">
+      <div class="services__head reveal">
         <div>
           <span class="eyebrow" data-i18n="services.eyebrow">Nos prestations</span>
           <h2 data-i18n="services.title">Trois expertises,<br><em>un même objectif</em> : vous</h2>
@@ -251,7 +251,7 @@
         <a href="#" class="btn btn--outline" data-i18n="services.btn">Voir tous nos services</a>
       </div>
 
-      <div class="services-grid">
+      <div class="services-grid reveal reveal--stagger">
         <article class="service-card">
           <div class="service-card__media">
             <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=85&fit=crop"
@@ -321,66 +321,135 @@
   <!-- ═══════════ APPROACH ═══════════ -->
   <section class="section" id="approach">
     <div class="container">
-      <span class="eyebrow" data-i18n="approach.eyebrow">Notre approche</span>
-      <h2 data-i18n="approach.title">Un parcours clair<br>en <em>trois étapes</em></h2>
-
-      <div class="cards">
-        <article class="card">
-          <span class="card__num" data-i18n="approach.step1.num">01</span>
-          <h3 data-i18n="approach.step1.title">Évaluation</h3>
-          <p data-i18n="approach.step1.body">
-            Bilan approfondi de vos besoins, de votre historique et de vos
-            objectifs de soin.
-          </p>
-        </article>
-        <article class="card">
-          <span class="card__num" data-i18n="approach.step2.num">02</span>
-          <h3 data-i18n="approach.step2.title">Plan de traitement</h3>
-          <p data-i18n="approach.step2.body">
-            Un programme personnalisé combinant techniques manuelles, exercices
-            et conseils.
-          </p>
-        </article>
-        <article class="card">
-          <span class="card__num" data-i18n="approach.step3.num">03</span>
-          <h3 data-i18n="approach.step3.title">Suivi</h3>
-          <p data-i18n="approach.step3.body">
-            Ajustements réguliers et accompagnement sur le long terme pour un
-            résultat durable.
-          </p>
-        </article>
+      <div class="approach__head reveal">
+        <span class="eyebrow" data-i18n="approach.eyebrow">Notre approche</span>
+        <h2 data-i18n="approach.title">Un parcours clair<br>en <em>trois étapes</em></h2>
+        <p class="approach__intro" data-i18n="approach.intro">
+          De la première consultation au suivi sur le long terme, chaque étape
+          est pensée pour vous remettre en mouvement, sereinement.
+        </p>
       </div>
+
+      <ol class="approach__timeline reveal reveal--stagger" role="list">
+        <li class="approach__step">
+          <div class="step__marker" aria-hidden="true">
+            <span class="step__num" data-i18n="approach.step1.num">01</span>
+          </div>
+          <div class="step__content">
+            <h3 data-i18n="approach.step1.title">Évaluation</h3>
+            <p data-i18n="approach.step1.body">
+              Bilan approfondi de vos besoins, de votre historique et de vos
+              objectifs de soin.
+            </p>
+          </div>
+        </li>
+
+        <li class="approach__step">
+          <div class="step__marker" aria-hidden="true">
+            <span class="step__num" data-i18n="approach.step2.num">02</span>
+          </div>
+          <div class="step__content">
+            <h3 data-i18n="approach.step2.title">Plan de traitement</h3>
+            <p data-i18n="approach.step2.body">
+              Un programme personnalisé combinant techniques manuelles, exercices
+              et conseils.
+            </p>
+          </div>
+        </li>
+
+        <li class="approach__step">
+          <div class="step__marker" aria-hidden="true">
+            <span class="step__num" data-i18n="approach.step3.num">03</span>
+          </div>
+          <div class="step__content">
+            <h3 data-i18n="approach.step3.title">Suivi</h3>
+            <p data-i18n="approach.step3.body">
+              Ajustements réguliers et accompagnement sur le long terme pour un
+              résultat durable.
+            </p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- ═══════════ TESTIMONIALS ═══════════ -->
   <section class="section section--alt" id="testimonials">
     <div class="container">
-      <span class="eyebrow" data-i18n="testimonials.eyebrow">Elles/ils en parlent</span>
-      <h2 data-i18n="testimonials.title">Ce que disent<br><em>nos patients</em></h2>
+      <div class="testimonials__head reveal">
+        <span class="eyebrow" data-i18n="testimonials.eyebrow">Elles/ils en parlent</span>
+        <h2 data-i18n="testimonials.title">Ce que disent<br><em>nos patients</em></h2>
+      </div>
 
-      <div class="cards">
-        <blockquote class="testimonial">
-          <p data-i18n="testimonials.t1.quote">
-            « Une écoute exceptionnelle et une expertise qui fait la différence. »
-          </p>
-          <div class="testimonial__author" data-i18n="testimonials.t1.name">Camille L.</div>
-          <div class="testimonial__role" data-i18n="testimonials.t1.role">Patiente depuis 2 ans</div>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p data-i18n="testimonials.t2.quote">
-            « Après ma blessure au genou, j'ai retrouvé une mobilité complète. »
-          </p>
-          <div class="testimonial__author" data-i18n="testimonials.t2.name">Thomas R.</div>
-          <div class="testimonial__role" data-i18n="testimonials.t2.role">Coureur amateur</div>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p data-i18n="testimonials.t3.quote">
-            « Un cabinet apaisant, une équipe professionnelle. »
-          </p>
-          <div class="testimonial__author" data-i18n="testimonials.t3.name">Sophie M.</div>
-          <div class="testimonial__role" data-i18n="testimonials.t3.role">Patiente depuis 6 mois</div>
-        </blockquote>
+      <div class="testimonials-grid reveal reveal--stagger">
+        <figure class="testimonial-card">
+          <div class="testimonial__rating"
+               role="img"
+               data-i18n-attr="aria-label:testimonials.ratingLabel"
+               aria-label="Note : 5 étoiles sur 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="testimonial__quote" data-i18n="testimonials.t1.quote">
+            « Une écoute exceptionnelle et une expertise qui fait la différence. Je recommande vivement. »
+          </blockquote>
+          <figcaption class="testimonial__author-block">
+            <span class="testimonial__avatar" data-i18n="testimonials.t1.initials" aria-hidden="true">CL</span>
+            <span>
+              <span class="testimonial__author" data-i18n="testimonials.t1.name">Camille L.</span>
+              <span class="testimonial__role" data-i18n="testimonials.t1.role">Patiente depuis 2 ans</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial-card">
+          <div class="testimonial__rating"
+               role="img"
+               data-i18n-attr="aria-label:testimonials.ratingLabel"
+               aria-label="Note : 5 étoiles sur 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="testimonial__quote" data-i18n="testimonials.t2.quote">
+            « Après ma blessure au genou, j'ai retrouvé une mobilité complète grâce à un suivi personnalisé. »
+          </blockquote>
+          <figcaption class="testimonial__author-block">
+            <span class="testimonial__avatar" data-i18n="testimonials.t2.initials" aria-hidden="true">TR</span>
+            <span>
+              <span class="testimonial__author" data-i18n="testimonials.t2.name">Thomas R.</span>
+              <span class="testimonial__role" data-i18n="testimonials.t2.role">Coureur amateur</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial-card">
+          <div class="testimonial__rating"
+               role="img"
+               data-i18n-attr="aria-label:testimonials.ratingLabel"
+               aria-label="Note : 5 étoiles sur 5">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="testimonial__quote" data-i18n="testimonials.t3.quote">
+            « Un cabinet apaisant, une équipe professionnelle — je me sens enfin écouté(e). »
+          </blockquote>
+          <figcaption class="testimonial__author-block">
+            <span class="testimonial__avatar" data-i18n="testimonials.t3.initials" aria-hidden="true">SM</span>
+            <span>
+              <span class="testimonial__author" data-i18n="testimonials.t3.name">Sophie M.</span>
+              <span class="testimonial__role" data-i18n="testimonials.t3.role">Patiente depuis 6 mois</span>
+            </span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -388,20 +457,55 @@
   <!-- ═══════════ CTA BOOKING (Calendly slot) ═══════════ -->
   <section class="section" id="booking">
     <div class="container">
-      <div class="cta-booking">
-        <span class="eyebrow" data-i18n="cta.eyebrow">Prenez rendez-vous</span>
-        <h2 data-i18n="cta.title">Prêt(e) à prendre soin<br>de <em>vous</em> ?</h2>
-        <p data-i18n="cta.sub">
-          Réservez votre consultation en quelques clics. Nous vous répondons dans la journée.
-        </p>
-        <a href="https://calendly.com/djungo974" target="_blank" rel="noopener"
-           class="btn btn--ghost-light" data-i18n="cta.btn">Réserver en ligne</a>
+      <div class="cta-booking reveal">
+        <div class="cta-booking__inner">
+          <span class="eyebrow" data-i18n="cta.eyebrow">Prenez rendez-vous</span>
+          <span class="cta-booking__divider" aria-hidden="true"></span>
+          <h2 data-i18n="cta.title">Prêt(e) à prendre soin<br>de <em>vous</em> ?</h2>
+          <p class="cta-booking__sub" data-i18n="cta.sub">
+            Réservez votre consultation en quelques clics. Nous vous répondons dans la journée.
+          </p>
 
-        <!-- Calendly inline widget will be mounted here at step 3 -->
-        <div class="calendly-slot" id="calendly-inline" aria-live="polite">
-          <span data-i18n="cta.widgetNote">
-            Le calendrier de prise de rendez-vous s'intégrera ici à l'étape suivante.
-          </span>
+          <div class="cta-booking__actions">
+            <a href="https://calendly.com/djungo974" target="_blank" rel="noopener"
+               class="btn btn--primary" data-i18n="cta.btn">Réserver en ligne</a>
+            <a href="tel:+2305000000" class="btn btn--ghost-light" data-i18n="cta.btnCall">
+              Nous appeler
+            </a>
+          </div>
+
+          <div class="cta-booking__meta">
+            <span class="cta-booking__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+              <span data-i18n="cta.meta.reply">Réponse en moins de 24h</span>
+            </span>
+            <span class="cta-booking__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                <path d="M3 10h18M8 3v4M16 3v4"/>
+              </svg>
+              <span data-i18n="cta.meta.slots">Créneaux disponibles cette semaine</span>
+            </span>
+            <span class="cta-booking__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span data-i18n="cta.meta.secure">Paiement sur place, sans engagement</span>
+            </span>
+          </div>
+
+          <!-- Calendly inline widget will be mounted here at step 3 -->
+          <div class="calendly-slot" id="calendly-inline" aria-live="polite">
+            <div>
+              <span class="calendly-slot__tag" data-i18n="cta.widgetTag">Calendrier Calendly</span>
+              <br>
+              <span data-i18n="cta.widgetNote">
+                Le calendrier de prise de rendez-vous s'intégrera ici à l'étape suivante.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

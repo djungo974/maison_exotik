@@ -129,7 +129,7 @@
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="container hero__content">
-      <span class="eyebrow" data-i18n="hero.eyebrow">Saint-André · La Réunion</span>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Tamarin · Île Maurice</span>
       <h1 data-i18n="hero.title">Votre bien-être,<br><em>notre expertise</em></h1>
       <p class="hero__sub" data-i18n="hero.sub">
         Cabinet de kinésithérapie et bien-être. Une approche humaine et sur mesure
@@ -140,24 +140,102 @@
         <a href="#services" class="btn btn--ghost-light" data-i18n="hero.btnServices">Découvrir nos services</a>
       </div>
     </div>
+
+    <a href="#trust" class="hero__scroll" aria-label="Défiler vers le contenu">
+      <span data-i18n="hero.scroll">Défiler</span>
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ═══════════ TRUST BAR ═══════════ -->
+  <section class="trust-bar" id="trust" aria-label="Points de confiance">
+    <div class="container trust-bar__inner">
+      <span class="trust-item">
+        <span class="trust-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+        </span>
+        <span><strong data-i18n="trust.exp.num">7</strong>&nbsp;<span data-i18n="trust.exp.label">années d'expérience clinique</span></span>
+      </span>
+
+      <span class="trust-sep" aria-hidden="true"></span>
+
+      <span class="trust-item">
+        <span class="trust-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+        </span>
+        <span data-i18n="trust.certified">Thérapies manuelles certifiées</span>
+      </span>
+
+      <span class="trust-sep" aria-hidden="true"></span>
+
+      <span class="trust-item">
+        <span class="trust-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2l-2 10h6l-7 10 2-10H6z"/>
+          </svg>
+        </span>
+        <span data-i18n="trust.athletes">Sportifs amateurs &amp; confirmés</span>
+      </span>
+
+      <span class="trust-sep" aria-hidden="true"></span>
+
+      <span class="trust-item">
+        <span class="trust-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </span>
+        <span data-i18n="trust.tailored">Approche sur mesure</span>
+      </span>
+    </div>
   </section>
 
   <!-- ═══════════ ABOUT TEASER ═══════════ -->
-  <section class="section" id="about">
-    <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:3rem;align-items:center;">
-      <div>
-        <span class="eyebrow" data-i18n="about.eyebrow">Notre cabinet</span>
-        <h2 data-i18n="about.title">Une pratique<br><em>bienveillante</em> et rigoureuse</h2>
-        <p data-i18n="about.body">
-          Depuis plusieurs années, notre équipe accompagne chaque patient dans un
-          parcours de soin adapté à ses besoins.
-        </p>
-        <a href="#" class="btn btn--outline" data-i18n="about.btn">En savoir plus sur nous</a>
-      </div>
-      <div class="img-placeholder"
-           data-i18n-attr="aria-label:about.imgAlt"
-           aria-label="Praticien accueillant un patient dans le cabinet">
-        [ about image — step 2 ]
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content">
+          <span class="eyebrow" data-i18n="about.eyebrow">Notre cabinet</span>
+          <h2 data-i18n="about.title">Une pratique<br><em>bienveillante</em> et rigoureuse</h2>
+          <p data-i18n="about.body">
+            Depuis plusieurs années, notre équipe accompagne chaque patient dans un
+            parcours de soin adapté à ses besoins. Nous alliant écoute clinique et
+            techniques manuelles modernes, nous vous aidons à retrouver mobilité,
+            confort et vitalité.
+          </p>
+
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num" data-i18n="about.stat1.num">500+</span>
+              <span class="stat__label" data-i18n="about.stat1.label">patients accompagnés</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-i18n="about.stat2.num">7</span>
+              <span class="stat__label" data-i18n="about.stat2.label">années d'expertise clinique</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-i18n="about.stat3.num">98<small>%</small></span>
+              <span class="stat__label" data-i18n="about.stat3.label">de satisfaction patient</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--outline" data-i18n="about.btn">En savoir plus sur nous</a>
+        </div>
+
+        <figure class="about__media">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=85&fit=crop"
+               loading="lazy"
+               data-i18n-attr="alt:about.imgAlt"
+               alt="Praticien accueillant un patient dans le cabinet">
+          <figcaption class="about__quote" data-i18n="about.quote">
+            « Prendre soin du corps, c'est écouter ce qu'il a à dire. »
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -165,35 +243,77 @@
   <!-- ═══════════ SERVICES PREVIEW ═══════════ -->
   <section class="section section--alt" id="services">
     <div class="container">
-      <span class="eyebrow" data-i18n="services.eyebrow">Nos prestations</span>
-      <h2 data-i18n="services.title">Trois expertises,<br><em>un même objectif</em> : vous</h2>
-
-      <div class="cards">
-        <article class="card">
-          <h3 data-i18n="services.s1.title">Kinésithérapie</h3>
-          <p data-i18n="services.s1.body">
-            Rééducation post-opératoire, traitement des douleurs chroniques,
-            thérapies manuelles et exercices thérapeutiques ciblés.
-          </p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.s2.title">Rééducation sportive</h3>
-          <p data-i18n="services.s2.body">
-            Reprise d'activité après blessure, préparation physique, prévention
-            des récidives.
-          </p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.s3.title">Bien-être &amp; massages</h3>
-          <p data-i18n="services.s3.body">
-            Massages thérapeutiques, relaxation profonde et techniques de
-            récupération.
-          </p>
-        </article>
+      <div class="services__head">
+        <div>
+          <span class="eyebrow" data-i18n="services.eyebrow">Nos prestations</span>
+          <h2 data-i18n="services.title">Trois expertises,<br><em>un même objectif</em> : vous</h2>
+        </div>
+        <a href="#" class="btn btn--outline" data-i18n="services.btn">Voir tous nos services</a>
       </div>
 
-      <div style="margin-top:2rem;">
-        <a href="#" class="btn btn--outline" data-i18n="services.btn">Voir tous nos services</a>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=85&fit=crop"
+                 loading="lazy"
+                 data-i18n-attr="alt:services.s1.imgAlt"
+                 alt="Séance de kinésithérapie manuelle">
+            <span class="service-card__tag" data-i18n="services.s1.tag">Clinique</span>
+          </div>
+          <div class="service-card__body">
+            <h3 data-i18n="services.s1.title">Kinésithérapie</h3>
+            <p data-i18n="services.s1.body">
+              Rééducation post-opératoire, traitement des douleurs chroniques,
+              thérapies manuelles et exercices thérapeutiques ciblés.
+            </p>
+            <a href="#" class="service-card__link">
+              <span data-i18n="services.learnMore">En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=85&fit=crop"
+                 loading="lazy"
+                 data-i18n-attr="alt:services.s2.imgAlt"
+                 alt="Coureur en plein effort">
+            <span class="service-card__tag" data-i18n="services.s2.tag">Sport</span>
+          </div>
+          <div class="service-card__body">
+            <h3 data-i18n="services.s2.title">Rééducation sportive</h3>
+            <p data-i18n="services.s2.body">
+              Reprise d'activité après blessure, préparation physique, prévention
+              des récidives et accompagnement de l'athlète amateur ou confirmé.
+            </p>
+            <a href="#" class="service-card__link">
+              <span data-i18n="services.learnMore">En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900&q=85&fit=crop"
+                 loading="lazy"
+                 data-i18n-attr="alt:services.s3.imgAlt"
+                 alt="Massage thérapeutique relaxant">
+            <span class="service-card__tag" data-i18n="services.s3.tag">Bien-être</span>
+          </div>
+          <div class="service-card__body">
+            <h3 data-i18n="services.s3.title">Bien-être &amp; massages</h3>
+            <p data-i18n="services.s3.body">
+              Massages thérapeutiques, relaxation profonde et techniques de
+              récupération pour relâcher les tensions et restaurer l'équilibre corporel.
+            </p>
+            <a href="#" class="service-card__link">
+              <span data-i18n="services.learnMore">En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -298,7 +418,7 @@
           </div>
           <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;"
              data-i18n="footer.tagline">
-            Kinésithérapie &amp; bien-être — Saint-André, La Réunion
+            Kinésithérapie &amp; bien-être — Tamarin, Île Maurice
           </p>
         </div>
 
@@ -315,9 +435,9 @@
         <div>
           <h4 data-i18n="footer.contactTitle">Contact</h4>
           <ul>
-            <li data-i18n="footer.address">123 Rue du Bien-être, 97440 Saint-André</li>
-            <li><a href="tel:+262692000000" data-i18n="footer.phone">+262 692 00 00 00</a></li>
-            <li><a href="mailto:contact@sentezvousbien.re" data-i18n="footer.email">contact@sentezvousbien.re</a></li>
+            <li data-i18n="footer.address">Avenue des Tamariniers, Tamarin, Île Maurice</li>
+            <li><a href="tel:+2305000000" data-i18n="footer.phone">+230 5000 00 00</a></li>
+            <li><a href="mailto:contact@sentezvousbien.mu" data-i18n="footer.email">contact@sentezvousbien.mu</a></li>
           </ul>
         </div>
 

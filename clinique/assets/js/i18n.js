@@ -26,7 +26,7 @@ const translations = {
     'lang.switchLabel': 'Changer de langue',
 
     /* ── Hero ── */
-    'hero.eyebrow':     'Saint-André · La Réunion',
+    'hero.eyebrow':     'Tamarin · Île Maurice',
     'hero.title':       'Votre bien-être,<br><em>notre expertise</em>',
     'hero.sub':         'Cabinet de kinésithérapie et bien-être. Une approche humaine et sur mesure pour votre rééducation, votre récupération et votre équilibre.',
     'hero.btnBook':     'Réserver ma séance',
@@ -34,6 +34,14 @@ const translations = {
     'hero.imgAlt1':     'Séance de kinésithérapie dans un cabinet lumineux',
     'hero.imgAlt2':     'Intérieur apaisant d\'un cabinet de bien-être',
     'hero.imgAlt3':     'Soins thérapeutiques par un kinésithérapeute',
+    'hero.scroll':      'Défiler',
+
+    /* ── Trust bar ── */
+    'trust.exp.num':    '7',
+    'trust.exp.label':  'années d\'expérience clinique',
+    'trust.certified':  'Thérapies manuelles certifiées',
+    'trust.athletes':   'Sportifs amateurs & confirmés',
+    'trust.tailored':   'Approche sur mesure',
 
     /* ── About teaser ── */
     'about.eyebrow':    'Notre cabinet',
@@ -41,16 +49,30 @@ const translations = {
     'about.body':       'Depuis plusieurs années, notre équipe accompagne chaque patient dans un parcours de soin adapté à ses besoins. Nous alliant écoute clinique et techniques manuelles modernes, nous vous aidons à retrouver mobilité, confort et vitalité.',
     'about.btn':        'En savoir plus sur nous',
     'about.imgAlt':     'Praticien accueillant un patient dans le cabinet',
+    'about.quote':      '« Prendre soin du corps, c\'est écouter ce qu\'il a à dire. »',
+    'about.stat1.num':   '500+',
+    'about.stat1.label': 'patients accompagnés',
+    'about.stat2.num':   '7',
+    'about.stat2.label': 'années d\'expertise clinique',
+    'about.stat3.num':   '98<small>%</small>',
+    'about.stat3.label': 'de satisfaction patient',
 
     /* ── Services preview ── */
     'services.eyebrow':  'Nos prestations',
     'services.title':    'Trois expertises,<br><em>un même objectif</em> : vous',
+    'services.learnMore':'En savoir plus',
+    'services.s1.tag':   'Clinique',
     'services.s1.title': 'Kinésithérapie',
     'services.s1.body':  'Rééducation post-opératoire, traitement des douleurs chroniques, thérapies manuelles et exercices thérapeutiques ciblés.',
+    'services.s1.imgAlt':'Séance de kinésithérapie manuelle',
+    'services.s2.tag':   'Sport',
     'services.s2.title': 'Rééducation sportive',
     'services.s2.body':  'Reprise d\'activité après blessure, préparation physique, prévention des récidives et accompagnement de l\'athlète amateur ou confirmé.',
+    'services.s2.imgAlt':'Coureur en plein effort',
+    'services.s3.tag':   'Bien-être',
     'services.s3.title': 'Bien-être & massages',
     'services.s3.body':  'Massages thérapeutiques, relaxation profonde et techniques de récupération pour relâcher les tensions et restaurer l\'équilibre corporel.',
+    'services.s3.imgAlt':'Massage thérapeutique relaxant',
     'services.btn':      'Voir tous nos services',
 
     /* ── Approach ── */
@@ -87,16 +109,16 @@ const translations = {
     'cta.widgetNote':   'Le calendrier de prise de rendez-vous s\'intégrera ici à l\'étape suivante.',
 
     /* ── Footer ── */
-    'footer.tagline':   'Kinésithérapie & bien-être — Saint-André, La Réunion',
+    'footer.tagline':   'Kinésithérapie & bien-être — Tamarin, Île Maurice',
     'footer.navTitle':  'Navigation',
     'footer.contactTitle': 'Contact',
     'footer.hoursTitle':'Horaires',
     'footer.hoursWeek': 'Lundi – Vendredi : 8h00 – 19h00',
     'footer.hoursSat':  'Samedi : 9h00 – 13h00',
     'footer.hoursSun':  'Dimanche : fermé',
-    'footer.address':   '123 Rue du Bien-être, 97440 Saint-André, La Réunion',
-    'footer.phone':     '+262 692 00 00 00',
-    'footer.email':     'contact@sentezvousbien.re',
+    'footer.address':   'Avenue des Tamariniers, Tamarin, Île Maurice',
+    'footer.phone':     '+230 5000 00 00',
+    'footer.email':     'contact@sentezvousbien.mu',
     'footer.legal':     'Mentions légales',
     'footer.privacy':   'Politique de confidentialité',
     'footer.copyright': '© 2026 Sentez-vous bien. Tous droits réservés.',
@@ -122,7 +144,7 @@ const translations = {
     'lang.switchLabel': 'Switch language',
 
     /* ── Hero ── */
-    'hero.eyebrow':     'Saint-André · Réunion Island',
+    'hero.eyebrow':     'Tamarin · Mauritius',
     'hero.title':       'Your wellbeing,<br><em>our expertise</em>',
     'hero.sub':         'A physiotherapy and wellness clinic. A human, tailored approach for your rehabilitation, recovery and balance.',
     'hero.btnBook':     'Book your session',
@@ -130,6 +152,14 @@ const translations = {
     'hero.imgAlt1':     'Physiotherapy session in a bright clinic',
     'hero.imgAlt2':     'Peaceful interior of a wellness studio',
     'hero.imgAlt3':     'Therapeutic treatment by a physiotherapist',
+    'hero.scroll':      'Scroll',
+
+    /* ── Trust bar ── */
+    'trust.exp.num':    '7',
+    'trust.exp.label':  'years of clinical experience',
+    'trust.certified':  'Certified manual therapy',
+    'trust.athletes':   'Amateur & seasoned athletes',
+    'trust.tailored':   'Tailored approach',
 
     /* ── About teaser ── */
     'about.eyebrow':    'Our clinic',
@@ -137,16 +167,30 @@ const translations = {
     'about.body':       'For several years, our team has supported every patient through a care journey tailored to their needs. Combining clinical listening with modern manual techniques, we help you recover mobility, comfort and vitality.',
     'about.btn':        'Learn more about us',
     'about.imgAlt':     'Practitioner welcoming a patient at the clinic',
+    'about.quote':      '"To care for the body is to listen to what it has to say."',
+    'about.stat1.num':   '500+',
+    'about.stat1.label': 'patients supported',
+    'about.stat2.num':   '7',
+    'about.stat2.label': 'years of clinical expertise',
+    'about.stat3.num':   '98<small>%</small>',
+    'about.stat3.label': 'patient satisfaction',
 
     /* ── Services preview ── */
     'services.eyebrow':  'Our services',
     'services.title':    'Three specialties,<br><em>one focus</em>: you',
+    'services.learnMore':'Learn more',
+    'services.s1.tag':   'Clinical',
     'services.s1.title': 'Physiotherapy',
     'services.s1.body':  'Post-operative rehabilitation, chronic pain management, manual therapy and targeted therapeutic exercises.',
+    'services.s1.imgAlt':'Manual physiotherapy session',
+    'services.s2.tag':   'Sports',
     'services.s2.title': 'Sports rehabilitation',
     'services.s2.body':  'Return to activity after injury, physical preparation, injury prevention and support for amateur and seasoned athletes alike.',
+    'services.s2.imgAlt':'Runner pushing through a workout',
+    'services.s3.tag':   'Wellness',
     'services.s3.title': 'Wellness & massage',
     'services.s3.body':  'Therapeutic massage, deep relaxation and recovery techniques to release tension and restore physical balance.',
+    'services.s3.imgAlt':'Relaxing therapeutic massage',
     'services.btn':      'See all our services',
 
     /* ── Approach ── */
@@ -183,16 +227,16 @@ const translations = {
     'cta.widgetNote':   'The booking calendar will be embedded here in the next step.',
 
     /* ── Footer ── */
-    'footer.tagline':   'Physiotherapy & wellness — Saint-André, Réunion Island',
+    'footer.tagline':   'Physiotherapy & wellness — Tamarin, Mauritius',
     'footer.navTitle':  'Navigation',
     'footer.contactTitle': 'Contact',
     'footer.hoursTitle':'Opening hours',
     'footer.hoursWeek': 'Monday – Friday: 8:00 – 19:00',
     'footer.hoursSat':  'Saturday: 9:00 – 13:00',
     'footer.hoursSun':  'Sunday: closed',
-    'footer.address':   '123 Rue du Bien-être, 97440 Saint-André, Réunion Island',
-    'footer.phone':     '+262 692 00 00 00',
-    'footer.email':     'contact@sentezvousbien.re',
+    'footer.address':   'Avenue des Tamariniers, Tamarin, Mauritius',
+    'footer.phone':     '+230 5000 00 00',
+    'footer.email':     'contact@sentezvousbien.mu',
     'footer.legal':     'Legal notice',
     'footer.privacy':   'Privacy policy',
     'footer.copyright': '© 2026 Sentez-vous bien. All rights reserved.',

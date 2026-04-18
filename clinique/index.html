@@ -458,19 +458,54 @@
   <section class="section" id="booking">
     <div class="container">
       <div class="cta-booking">
-        <span class="eyebrow" data-i18n="cta.eyebrow">Prenez rendez-vous</span>
-        <h2 data-i18n="cta.title">Prêt(e) à prendre soin<br>de <em>vous</em> ?</h2>
-        <p data-i18n="cta.sub">
-          Réservez votre consultation en quelques clics. Nous vous répondons dans la journée.
-        </p>
-        <a href="https://calendly.com/djungo974" target="_blank" rel="noopener"
-           class="btn btn--ghost-light" data-i18n="cta.btn">Réserver en ligne</a>
+        <div class="cta-booking__inner">
+          <span class="eyebrow" data-i18n="cta.eyebrow">Prenez rendez-vous</span>
+          <span class="cta-booking__divider" aria-hidden="true"></span>
+          <h2 data-i18n="cta.title">Prêt(e) à prendre soin<br>de <em>vous</em> ?</h2>
+          <p class="cta-booking__sub" data-i18n="cta.sub">
+            Réservez votre consultation en quelques clics. Nous vous répondons dans la journée.
+          </p>
 
-        <!-- Calendly inline widget will be mounted here at step 3 -->
-        <div class="calendly-slot" id="calendly-inline" aria-live="polite">
-          <span data-i18n="cta.widgetNote">
-            Le calendrier de prise de rendez-vous s'intégrera ici à l'étape suivante.
-          </span>
+          <div class="cta-booking__actions">
+            <a href="https://calendly.com/djungo974" target="_blank" rel="noopener"
+               class="btn btn--primary" data-i18n="cta.btn">Réserver en ligne</a>
+            <a href="tel:+2305000000" class="btn btn--ghost-light" data-i18n="cta.btnCall">
+              Nous appeler
+            </a>
+          </div>
+
+          <div class="cta-booking__meta">
+            <span class="cta-booking__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+              <span data-i18n="cta.meta.reply">Réponse en moins de 24h</span>
+            </span>
+            <span class="cta-booking__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                <path d="M3 10h18M8 3v4M16 3v4"/>
+              </svg>
+              <span data-i18n="cta.meta.slots">Créneaux disponibles cette semaine</span>
+            </span>
+            <span class="cta-booking__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span data-i18n="cta.meta.secure">Paiement sur place, sans engagement</span>
+            </span>
+          </div>
+
+          <!-- Calendly inline widget will be mounted here at step 3 -->
+          <div class="calendly-slot" id="calendly-inline" aria-live="polite">
+            <div>
+              <span class="calendly-slot__tag" data-i18n="cta.widgetTag">Calendrier Calendly</span>
+              <br>
+              <span data-i18n="cta.widgetNote">
+                Le calendrier de prise de rendez-vous s'intégrera ici à l'étape suivante.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

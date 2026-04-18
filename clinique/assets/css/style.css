@@ -867,26 +867,121 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
   margin-top: 2px;
 }
 
+/* ── CTA booking block ─────────────────────────────── */
 .cta-booking {
-  background: var(--color-primary);
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255,255,255,0.08), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(255,255,255,0.05), transparent 40%),
+    linear-gradient(135deg, #5B7C99 0%, #3F5B74 100%);
   color: #fff;
   border-radius: var(--radius-md);
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
   text-align: center;
   margin-block: 2rem;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -40px rgba(63, 91, 116, 0.55);
 }
-.cta-booking h2 { color: #fff; }
-.cta-booking h2 em { color: #CFE0ED; }
-.cta-booking p { color: rgba(255, 255, 255, 0.88); }
-.cta-booking .eyebrow { color: #CFE0ED; }
 
+/* Decorative dot grid (top-right) */
+.cta-booking::before {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 240px; height: 240px;
+  background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: 0.6;
+  pointer-events: none;
+  mask-image: radial-gradient(circle, black 40%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
+}
+/* Thin serif divider line under the eyebrow */
+.cta-booking__divider {
+  display: inline-block;
+  width: 48px; height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0.5rem auto 1.25rem;
+}
+
+.cta-booking__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.cta-booking h2 {
+  color: #fff;
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+  margin-bottom: 1rem;
+}
+.cta-booking h2 em { color: #CFE0ED; font-style: italic; }
+.cta-booking .eyebrow { color: #CFE0ED; }
+.cta-booking__sub {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  max-width: 52ch;
+  margin: 0 auto 2rem;
+}
+
+.cta-booking__actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.cta-booking__actions .btn--primary {
+  background: #fff;
+  color: var(--color-primary-dark);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.25);
+}
+.cta-booking__actions .btn--primary:hover { background: #F5F1EA; color: var(--color-primary-dark); }
+
+/* Meta row under the buttons */
+.cta-booking__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+.cta-booking__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cta-booking__meta-item svg {
+  width: 16px; height: 16px;
+  color: #CFE0ED;
+}
+
+/* Inline Calendly widget slot */
 .calendly-slot {
-  margin-top: 2rem;
-  padding: 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.5);
+  margin-top: 2.5rem;
+  padding: 2.25rem 1.5rem;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.82);
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.calendly-slot__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  margin-bottom: 0.75rem;
 }
 
 /* ── Footer ───────────────────────────────────────── */

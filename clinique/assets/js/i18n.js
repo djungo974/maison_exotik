@@ -111,6 +111,11 @@ const translations = {
     'cta.title':        'Prêt(e) à prendre soin<br>de <em>vous</em> ?',
     'cta.sub':          'Réservez votre consultation en quelques clics. Nous vous répondons dans la journée.',
     'cta.btn':          'Réserver en ligne',
+    'cta.btnCall':      'Nous appeler',
+    'cta.meta.reply':   'Réponse en moins de 24h',
+    'cta.meta.slots':   'Créneaux disponibles cette semaine',
+    'cta.meta.secure':  'Paiement sur place, sans engagement',
+    'cta.widgetTag':    'Calendrier Calendly',
     'cta.widgetNote':   'Le calendrier de prise de rendez-vous s\'intégrera ici à l\'étape suivante.',
 
     /* ── Footer ── */
@@ -234,6 +239,11 @@ const translations = {
     'cta.title':        'Ready to take care<br>of <em>yourself</em>?',
     'cta.sub':          'Book your consultation in a few clicks. We reply the same day.',
     'cta.btn':          'Book online',
+    'cta.btnCall':      'Call us',
+    'cta.meta.reply':   'Reply within 24 hours',
+    'cta.meta.slots':   'Slots available this week',
+    'cta.meta.secure':  'Pay on site, no commitment',
+    'cta.widgetTag':    'Calendly calendar',
     'cta.widgetNote':   'The booking calendar will be embedded here in the next step.',
 
     /* ── Footer ── */

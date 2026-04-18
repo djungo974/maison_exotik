@@ -34,6 +34,14 @@ const translations = {
     'hero.imgAlt1':     'Séance de kinésithérapie dans un cabinet lumineux',
     'hero.imgAlt2':     'Intérieur apaisant d\'un cabinet de bien-être',
     'hero.imgAlt3':     'Soins thérapeutiques par un kinésithérapeute',
+    'hero.scroll':      'Défiler',
+
+    /* ── Trust bar ── */
+    'trust.exp.num':    '7',
+    'trust.exp.label':  'années d\'expérience clinique',
+    'trust.certified':  'Thérapies manuelles certifiées',
+    'trust.athletes':   'Sportifs amateurs & confirmés',
+    'trust.tailored':   'Approche sur mesure',
 
     /* ── About teaser ── */
     'about.eyebrow':    'Notre cabinet',
@@ -130,6 +138,14 @@ const translations = {
     'hero.imgAlt1':     'Physiotherapy session in a bright clinic',
     'hero.imgAlt2':     'Peaceful interior of a wellness studio',
     'hero.imgAlt3':     'Therapeutic treatment by a physiotherapist',
+    'hero.scroll':      'Scroll',
+
+    /* ── Trust bar ── */
+    'trust.exp.num':    '7',
+    'trust.exp.label':  'years of clinical experience',
+    'trust.certified':  'Certified manual therapy',
+    'trust.athletes':   'Amateur & seasoned athletes',
+    'trust.tailored':   'Tailored approach',
 
     /* ── About teaser ── */
     'about.eyebrow':    'Our clinic',

@@ -78,6 +78,7 @@ const translations = {
     /* ── Approach ── */
     'approach.eyebrow': 'Notre approche',
     'approach.title':   'Un parcours clair<br>en <em>trois étapes</em>',
+    'approach.intro':   'De la première consultation au suivi sur le long terme, chaque étape est pensée pour vous remettre en mouvement, sereinement.',
     'approach.step1.num':   '01',
     'approach.step1.title': 'Évaluation',
     'approach.step1.body':  'Bilan approfondi de vos besoins, de votre historique et de vos objectifs de soin.',
@@ -196,6 +197,7 @@ const translations = {
     /* ── Approach ── */
     'approach.eyebrow': 'Our approach',
     'approach.title':   'A clear journey<br>in <em>three steps</em>',
+    'approach.intro':   'From the first consultation to long-term follow-up, every step is designed to get you moving again — calmly and with confidence.',
     'approach.step1.num':   '01',
     'approach.step1.title': 'Assessment',
     'approach.step1.body':  'A thorough review of your needs, history and care goals.',

@@ -657,6 +657,106 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
 }
 .service-card:hover .service-card__link svg { transform: translateX(4px); }
 
+/* ── Approach timeline ─────────────────────────────── */
+.approach__head {
+  max-width: 720px;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+.approach__head h2 { margin-bottom: 0.5rem; }
+.approach__intro {
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+  max-width: 52ch;
+}
+
+.approach__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4.5rem);
+  max-width: 860px;
+}
+
+/* Vertical connector line running through the numbers */
+.approach__timeline::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 60px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-border) 8%,
+    var(--color-border) 92%,
+    transparent 100%
+  );
+}
+@media (max-width: 620px) {
+  .approach__timeline::before { left: 32px; }
+}
+
+.approach__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: flex-start;
+}
+@media (max-width: 620px) {
+  .approach__step { grid-template-columns: 64px 1fr; }
+}
+
+.step__marker {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.15rem;
+}
+
+.step__num {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  background: var(--color-bg);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+/* Small dot on the connector line aligned with the baseline */
+.step__num::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 0.35rem);
+  transform: translateX(-50%);
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-bg);
+}
+
+.step__content { padding-top: 0.75rem; }
+.step__content h3 {
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+  margin-bottom: 0.6rem;
+}
+.step__content p {
+  color: var(--color-ink-soft);
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* Hide generic .cards styling for approach — already overridden by timeline */
+.approach-section { /* scoping hook, unused but kept for clarity */ }
+
 .card__num {
   display: inline-block;
   font-family: var(--font-serif);

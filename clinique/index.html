@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5B7C99">
+
+  <title data-i18n="doc.title">Sentez-vous bien | Cabinet de Kinésithérapie &amp; Bien-être</title>
+  <meta name="description"
+        data-i18n-attr="content:doc.description"
+        content="Sentez-vous bien — Cabinet de kinésithérapie et bien-être. Expertise, écoute et approche personnalisée pour votre rééducation et votre vitalité.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#top" class="navbar__brand" aria-label="Sentez-vous bien">
+        <span class="brand-dot" aria-hidden="true">
+          <!-- Wellness leaf + hand stroke -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21c-1-5-5-7-8-8 4-2 8-1 8 4"/>
+            <path d="M12 21c1-5 5-7 8-8-4-2-8-1-8 4"/>
+            <path d="M12 21V9"/>
+            <circle cx="12" cy="5" r="2.2"/>
+          </svg>
+        </span>
+        <span>Sentez-vous bien</span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="navbar__links">
+          <li><a href="#about"        data-i18n="nav.about">À propos</a></li>
+          <li><a href="#services"     data-i18n="nav.services">Services</a></li>
+          <li><a href="#approach"     data-i18n="nav.pricing">Tarifs</a></li>
+          <li><a href="#contact"      data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__right">
+        <div class="lang-switch"
+             role="group"
+             data-i18n-attr="aria-label:lang.switchLabel"
+             aria-label="Changer de langue">
+          <button type="button"
+                  class="lang-switch__btn is-active"
+                  data-lang-btn="fr"
+                  aria-pressed="true"
+                  data-i18n="lang.fr">FR</button>
+          <button type="button"
+                  class="lang-switch__btn"
+                  data-lang-btn="en"
+                  aria-pressed="false"
+                  data-i18n="lang.en">EN</button>
+        </div>
+
+        <a href="#booking" class="btn btn--primary" data-i18n="nav.book">Prendre RDV</a>
+
+        <button type="button"
+                class="navbar__burger"
+                id="burger"
+                data-i18n-attr="aria-label:nav.menuLabel"
+                aria-label="Menu"
+                aria-controls="mobile-nav"
+                aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ MOBILE NAV OVERLAY ═══════════ -->
+  <div class="mobile-nav" id="mobile-nav" data-open="false" aria-hidden="true">
+    <div class="mobile-nav__top">
+      <span class="navbar__brand">
+        <span class="brand-dot" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21c-1-5-5-7-8-8 4-2 8-1 8 4"/>
+            <path d="M12 21c1-5 5-7 8-8-4-2-8-1-8 4"/>
+            <path d="M12 21V9"/>
+            <circle cx="12" cy="5" r="2.2"/>
+          </svg>
+        </span>
+        <span>Sentez-vous bien</span>
+      </span>
+      <button type="button" class="mobile-nav__close" id="mobile-nav-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav__links">
+      <li><a href="#about"    data-mobile-close data-i18n="nav.about">À propos</a></li>
+      <li><a href="#services" data-mobile-close data-i18n="nav.services">Services</a></li>
+      <li><a href="#approach" data-mobile-close data-i18n="nav.pricing">Tarifs</a></li>
+      <li><a href="#contact"  data-mobile-close data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="mobile-nav__footer">
+      <a href="#booking" data-mobile-close class="btn btn--primary" data-i18n="nav.book">Prendre RDV</a>
+    </div>
+  </div>
+
+  <!-- ═══════════ HERO (Ken Burns 3 images) ═══════════ -->
+  <section class="hero" id="top">
+    <div class="hero-bg hero-bg-1"
+         role="img"
+         data-i18n-attr="aria-label:hero.imgAlt1"
+         aria-label="Séance de kinésithérapie dans un cabinet lumineux"></div>
+    <div class="hero-bg hero-bg-2"
+         role="img"
+         data-i18n-attr="aria-label:hero.imgAlt2"
+         aria-label="Intérieur apaisant d'un cabinet de bien-être"></div>
+    <div class="hero-bg hero-bg-3"
+         role="img"
+         data-i18n-attr="aria-label:hero.imgAlt3"
+         aria-label="Soins thérapeutiques par un kinésithérapeute"></div>
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container hero__content">
+      <span class="eyebrow" data-i18n="hero.eyebrow">Saint-André · La Réunion</span>
+      <h1 data-i18n="hero.title">Votre bien-être,<br><em>notre expertise</em></h1>
+      <p class="hero__sub" data-i18n="hero.sub">
+        Cabinet de kinésithérapie et bien-être. Une approche humaine et sur mesure
+        pour votre rééducation, votre récupération et votre équilibre.
+      </p>
+      <div class="hero__cta">
+        <a href="#booking" class="btn btn--primary" data-i18n="hero.btnBook">Réserver ma séance</a>
+        <a href="#services" class="btn btn--ghost-light" data-i18n="hero.btnServices">Découvrir nos services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT TEASER ═══════════ -->
+  <section class="section" id="about">
+    <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:3rem;align-items:center;">
+      <div>
+        <span class="eyebrow" data-i18n="about.eyebrow">Notre cabinet</span>
+        <h2 data-i18n="about.title">Une pratique<br><em>bienveillante</em> et rigoureuse</h2>
+        <p data-i18n="about.body">
+          Depuis plusieurs années, notre équipe accompagne chaque patient dans un
+          parcours de soin adapté à ses besoins.
+        </p>
+        <a href="#" class="btn btn--outline" data-i18n="about.btn">En savoir plus sur nous</a>
+      </div>
+      <div class="img-placeholder"
+           data-i18n-attr="aria-label:about.imgAlt"
+           aria-label="Praticien accueillant un patient dans le cabinet">
+        [ about image — step 2 ]
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES PREVIEW ═══════════ -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <span class="eyebrow" data-i18n="services.eyebrow">Nos prestations</span>
+      <h2 data-i18n="services.title">Trois expertises,<br><em>un même objectif</em> : vous</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="services.s1.title">Kinésithérapie</h3>
+          <p data-i18n="services.s1.body">
+            Rééducation post-opératoire, traitement des douleurs chroniques,
+            thérapies manuelles et exercices thérapeutiques ciblés.
+          </p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="services.s2.title">Rééducation sportive</h3>
+          <p data-i18n="services.s2.body">
+            Reprise d'activité après blessure, préparation physique, prévention
+            des récidives.
+          </p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="services.s3.title">Bien-être &amp; massages</h3>
+          <p data-i18n="services.s3.body">
+            Massages thérapeutiques, relaxation profonde et techniques de
+            récupération.
+          </p>
+        </article>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a href="#" class="btn btn--outline" data-i18n="services.btn">Voir tous nos services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ APPROACH ═══════════ -->
+  <section class="section" id="approach">
+    <div class="container">
+      <span class="eyebrow" data-i18n="approach.eyebrow">Notre approche</span>
+      <h2 data-i18n="approach.title">Un parcours clair<br>en <em>trois étapes</em></h2>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num" data-i18n="approach.step1.num">01</span>
+          <h3 data-i18n="approach.step1.title">Évaluation</h3>
+          <p data-i18n="approach.step1.body">
+            Bilan approfondi de vos besoins, de votre historique et de vos
+            objectifs de soin.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__num" data-i18n="approach.step2.num">02</span>
+          <h3 data-i18n="approach.step2.title">Plan de traitement</h3>
+          <p data-i18n="approach.step2.body">
+            Un programme personnalisé combinant techniques manuelles, exercices
+            et conseils.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__num" data-i18n="approach.step3.num">03</span>
+          <h3 data-i18n="approach.step3.title">Suivi</h3>
+          <p data-i18n="approach.step3.body">
+            Ajustements réguliers et accompagnement sur le long terme pour un
+            résultat durable.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TESTIMONIALS ═══════════ -->
+  <section class="section section--alt" id="testimonials">
+    <div class="container">
+      <span class="eyebrow" data-i18n="testimonials.eyebrow">Elles/ils en parlent</span>
+      <h2 data-i18n="testimonials.title">Ce que disent<br><em>nos patients</em></h2>
+
+      <div class="cards">
+        <blockquote class="testimonial">
+          <p data-i18n="testimonials.t1.quote">
+            « Une écoute exceptionnelle et une expertise qui fait la différence. »
+          </p>
+          <div class="testimonial__author" data-i18n="testimonials.t1.name">Camille L.</div>
+          <div class="testimonial__role" data-i18n="testimonials.t1.role">Patiente depuis 2 ans</div>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p data-i18n="testimonials.t2.quote">
+            « Après ma blessure au genou, j'ai retrouvé une mobilité complète. »
+          </p>
+          <div class="testimonial__author" data-i18n="testimonials.t2.name">Thomas R.</div>
+          <div class="testimonial__role" data-i18n="testimonials.t2.role">Coureur amateur</div>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p data-i18n="testimonials.t3.quote">
+            « Un cabinet apaisant, une équipe professionnelle. »
+          </p>
+          <div class="testimonial__author" data-i18n="testimonials.t3.name">Sophie M.</div>
+          <div class="testimonial__role" data-i18n="testimonials.t3.role">Patiente depuis 6 mois</div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA BOOKING (Calendly slot) ═══════════ -->
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="cta-booking">
+        <span class="eyebrow" data-i18n="cta.eyebrow">Prenez rendez-vous</span>
+        <h2 data-i18n="cta.title">Prêt(e) à prendre soin<br>de <em>vous</em> ?</h2>
+        <p data-i18n="cta.sub">
+          Réservez votre consultation en quelques clics. Nous vous répondons dans la journée.
+        </p>
+        <a href="https://calendly.com/djungo974" target="_blank" rel="noopener"
+           class="btn btn--ghost-light" data-i18n="cta.btn">Réserver en ligne</a>
+
+        <!-- Calendly inline widget will be mounted here at step 3 -->
+        <div class="calendly-slot" id="calendly-inline" aria-live="polite">
+          <span data-i18n="cta.widgetNote">
+            Le calendrier de prise de rendez-vous s'intégrera ici à l'étape suivante.
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="navbar__brand" style="color:#fff;margin-bottom:1rem;">
+            <span class="brand-dot" aria-hidden="true">Sb</span>
+            <span>Sentez-vous bien</span>
+          </div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;"
+             data-i18n="footer.tagline">
+            Kinésithérapie &amp; bien-être — Saint-André, La Réunion
+          </p>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.navTitle">Navigation</h4>
+          <ul>
+            <li><a href="#about"    data-i18n="nav.about">À propos</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#pricing"  data-i18n="nav.pricing">Tarifs</a></li>
+            <li><a href="#booking"  data-i18n="nav.book">Prendre RDV</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
+          <ul>
+            <li data-i18n="footer.address">123 Rue du Bien-être, 97440 Saint-André</li>
+            <li><a href="tel:+262692000000" data-i18n="footer.phone">+262 692 00 00 00</a></li>
+            <li><a href="mailto:contact@sentezvousbien.re" data-i18n="footer.email">contact@sentezvousbien.re</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.hoursTitle">Horaires</h4>
+          <ul>
+            <li data-i18n="footer.hoursWeek">Lundi – Vendredi : 8h00 – 19h00</li>
+            <li data-i18n="footer.hoursSat">Samedi : 9h00 – 13h00</li>
+            <li data-i18n="footer.hoursSun">Dimanche : fermé</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-i18n="footer.copyright">© 2026 Sentez-vous bien. Tous droits réservés.</span>
+        <span>
+          <a href="#" data-i18n="footer.legal">Mentions légales</a>
+          &nbsp;·&nbsp;
+          <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/ui.js" defer></script>
+</body>
+</html>

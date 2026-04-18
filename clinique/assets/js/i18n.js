@@ -92,15 +92,19 @@ const translations = {
     /* ── Testimonials ── */
     'testimonials.eyebrow': 'Elles/ils en parlent',
     'testimonials.title':   'Ce que disent<br><em>nos patients</em>',
+    'testimonials.ratingLabel': 'Note : 5 étoiles sur 5',
     'testimonials.t1.quote': '« Une écoute exceptionnelle et une expertise qui fait la différence. Je recommande vivement. »',
     'testimonials.t1.name':  'Camille L.',
     'testimonials.t1.role':  'Patiente depuis 2 ans',
+    'testimonials.t1.initials': 'CL',
     'testimonials.t2.quote': '« Après ma blessure au genou, j\'ai retrouvé une mobilité complète grâce à un suivi personnalisé. »',
     'testimonials.t2.name':  'Thomas R.',
     'testimonials.t2.role':  'Coureur amateur',
+    'testimonials.t2.initials': 'TR',
     'testimonials.t3.quote': '« Un cabinet apaisant, une équipe professionnelle — je me sens enfin écouté(e). »',
     'testimonials.t3.name':  'Sophie M.',
     'testimonials.t3.role':  'Patiente depuis 6 mois',
+    'testimonials.t3.initials': 'SM',
 
     /* ── CTA booking ── */
     'cta.eyebrow':      'Prenez rendez-vous',
@@ -211,15 +215,19 @@ const translations = {
     /* ── Testimonials ── */
     'testimonials.eyebrow': 'Kind words',
     'testimonials.title':   'What our<br><em>patients say</em>',
+    'testimonials.ratingLabel': 'Rating: 5 out of 5 stars',
     'testimonials.t1.quote': '"Exceptional listening and expertise that makes the difference. Highly recommended."',
     'testimonials.t1.name':  'Camille L.',
     'testimonials.t1.role':  'Patient for 2 years',
+    'testimonials.t1.initials': 'CL',
     'testimonials.t2.quote': '"After my knee injury, I regained full mobility thanks to a truly personalised follow-up."',
     'testimonials.t2.name':  'Thomas R.',
     'testimonials.t2.role':  'Amateur runner',
+    'testimonials.t2.initials': 'TR',
     'testimonials.t3.quote': '"A soothing clinic, a professional team — I finally feel heard."',
     'testimonials.t3.name':  'Sophie M.',
     'testimonials.t3.role':  'Patient for 6 months',
+    'testimonials.t3.initials': 'SM',
 
     /* ── CTA booking ── */
     'cta.eyebrow':      'Book an appointment',

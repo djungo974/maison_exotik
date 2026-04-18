@@ -121,13 +121,9 @@
     }
 
     .nav-logo {
-      display: inline-flex;
+      display: flex;
       flex-direction: column;
       line-height: 1;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 0.45rem 0.85rem;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.15);
     }
 
     .nav-logo .logo-main {
@@ -136,6 +132,16 @@
       font-weight: 600;
       letter-spacing: 0.25em;
       color: var(--dark);
+      /* Soft white glow behind the NEXUS letters — Photoshop "outer glow" feel */
+      text-shadow:
+        0 0 6px  rgba(255, 255, 255, 0.85),
+        0 0 14px rgba(255, 255, 255, 0.55),
+        0 0 26px rgba(255, 255, 255, 0.35);
+    }
+
+    /* When the navbar has its light backdrop on scroll, the white glow vanishes naturally */
+    #navbar.scrolled .nav-logo .logo-main {
+      text-shadow: none;
     }
 
     .nav-logo .logo-sub {

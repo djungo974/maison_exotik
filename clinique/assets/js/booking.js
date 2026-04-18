@@ -3,13 +3,14 @@
    URL: https://calendly.com/djungo974
    ════════════════════════════════════════════════════════════ */
 
-const CALENDLY_URL = 'https://calendly.com/djungo974';
+const CALENDLY_URL = 'https://calendly.com/djungo974/30min';
 
 /* Brand-tinted query params applied to every Calendly URL */
 const CALENDLY_PARAMS = {
-  background_color: 'fafaf7',
-  text_color:       '1f2933',
-  primary_color:    '5b7c99',
+  background_color:  'fafaf7',
+  text_color:        '1f2933',
+  primary_color:     '5b7c99',
+  hide_gdpr_banner:  '1',
 };
 
 function buildCalendlyUrl(extra = {}) {

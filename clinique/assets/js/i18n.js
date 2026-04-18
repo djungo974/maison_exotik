@@ -26,7 +26,7 @@ const translations = {
     'lang.switchLabel': 'Changer de langue',
 
     /* ── Hero ── */
-    'hero.eyebrow':     'Saint-André · La Réunion',
+    'hero.eyebrow':     'Tamarin · Île Maurice',
     'hero.title':       'Votre bien-être,<br><em>notre expertise</em>',
     'hero.sub':         'Cabinet de kinésithérapie et bien-être. Une approche humaine et sur mesure pour votre rééducation, votre récupération et votre équilibre.',
     'hero.btnBook':     'Réserver ma séance',
@@ -87,16 +87,16 @@ const translations = {
     'cta.widgetNote':   'Le calendrier de prise de rendez-vous s\'intégrera ici à l\'étape suivante.',
 
     /* ── Footer ── */
-    'footer.tagline':   'Kinésithérapie & bien-être — Saint-André, La Réunion',
+    'footer.tagline':   'Kinésithérapie & bien-être — Tamarin, Île Maurice',
     'footer.navTitle':  'Navigation',
     'footer.contactTitle': 'Contact',
     'footer.hoursTitle':'Horaires',
     'footer.hoursWeek': 'Lundi – Vendredi : 8h00 – 19h00',
     'footer.hoursSat':  'Samedi : 9h00 – 13h00',
     'footer.hoursSun':  'Dimanche : fermé',
-    'footer.address':   '123 Rue du Bien-être, 97440 Saint-André, La Réunion',
-    'footer.phone':     '+262 692 00 00 00',
-    'footer.email':     'contact@sentezvousbien.re',
+    'footer.address':   'Avenue des Tamariniers, Tamarin, Île Maurice',
+    'footer.phone':     '+230 5000 00 00',
+    'footer.email':     'contact@sentezvousbien.mu',
     'footer.legal':     'Mentions légales',
     'footer.privacy':   'Politique de confidentialité',
     'footer.copyright': '© 2026 Sentez-vous bien. Tous droits réservés.',
@@ -122,7 +122,7 @@ const translations = {
     'lang.switchLabel': 'Switch language',
 
     /* ── Hero ── */
-    'hero.eyebrow':     'Saint-André · Réunion Island',
+    'hero.eyebrow':     'Tamarin · Mauritius',
     'hero.title':       'Your wellbeing,<br><em>our expertise</em>',
     'hero.sub':         'A physiotherapy and wellness clinic. A human, tailored approach for your rehabilitation, recovery and balance.',
     'hero.btnBook':     'Book your session',
@@ -183,16 +183,16 @@ const translations = {
     'cta.widgetNote':   'The booking calendar will be embedded here in the next step.',
 
     /* ── Footer ── */
-    'footer.tagline':   'Physiotherapy & wellness — Saint-André, Réunion Island',
+    'footer.tagline':   'Physiotherapy & wellness — Tamarin, Mauritius',
     'footer.navTitle':  'Navigation',
     'footer.contactTitle': 'Contact',
     'footer.hoursTitle':'Opening hours',
     'footer.hoursWeek': 'Monday – Friday: 8:00 – 19:00',
     'footer.hoursSat':  'Saturday: 9:00 – 13:00',
     'footer.hoursSun':  'Sunday: closed',
-    'footer.address':   '123 Rue du Bien-être, 97440 Saint-André, Réunion Island',
-    'footer.phone':     '+262 692 00 00 00',
-    'footer.email':     'contact@sentezvousbien.re',
+    'footer.address':   'Avenue des Tamariniers, Tamarin, Mauritius',
+    'footer.phone':     '+230 5000 00 00',
+    'footer.email':     'contact@sentezvousbien.mu',
     'footer.legal':     'Legal notice',
     'footer.privacy':   'Privacy policy',
     'footer.copyright': '© 2026 Sentez-vous bien. All rights reserved.',

@@ -33,8 +33,45 @@ function initMobileNav() {
   });
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMobileNav);
-} else {
+function initScrollReveal() {
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+
+  // Graceful fallback: no IntersectionObserver → show everything
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach((el) => el.setAttribute('data-visible', 'true'));
+    return;
+  }
+
+  // Respect reduced-motion preference
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    targets.forEach((el) => el.setAttribute('data-visible', 'true'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.setAttribute('data-visible', 'true');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -60px 0px',
+  });
+
+  targets.forEach((el) => observer.observe(el));
+}
+
+function init() {
   initMobileNav();
+  initScrollReveal();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
 }

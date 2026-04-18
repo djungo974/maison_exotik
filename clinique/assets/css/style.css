@@ -1017,6 +1017,48 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
   font-size: 0.82rem;
 }
 
+/* ── Scroll-reveal animations ────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger direct children by up to 6 items */
+.reveal--stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal--stagger[data-visible="true"] > * {
+  opacity: 1;
+  transform: none;
+}
+.reveal--stagger[data-visible="true"] > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal--stagger[data-visible="true"] > *:nth-child(2) { transition-delay: 0.15s; }
+.reveal--stagger[data-visible="true"] > *:nth-child(3) { transition-delay: 0.25s; }
+.reveal--stagger[data-visible="true"] > *:nth-child(4) { transition-delay: 0.35s; }
+.reveal--stagger[data-visible="true"] > *:nth-child(5) { transition-delay: 0.45s; }
+.reveal--stagger[data-visible="true"] > *:nth-child(6) { transition-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* ── Responsive ──────────────────────────────────── */
 @media (max-width: 820px) {
   .navbar__links { display: none; }

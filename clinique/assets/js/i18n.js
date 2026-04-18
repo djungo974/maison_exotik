@@ -60,12 +60,19 @@ const translations = {
     /* ── Services preview ── */
     'services.eyebrow':  'Nos prestations',
     'services.title':    'Trois expertises,<br><em>un même objectif</em> : vous',
+    'services.learnMore':'En savoir plus',
+    'services.s1.tag':   'Clinique',
     'services.s1.title': 'Kinésithérapie',
     'services.s1.body':  'Rééducation post-opératoire, traitement des douleurs chroniques, thérapies manuelles et exercices thérapeutiques ciblés.',
+    'services.s1.imgAlt':'Séance de kinésithérapie manuelle',
+    'services.s2.tag':   'Sport',
     'services.s2.title': 'Rééducation sportive',
     'services.s2.body':  'Reprise d\'activité après blessure, préparation physique, prévention des récidives et accompagnement de l\'athlète amateur ou confirmé.',
+    'services.s2.imgAlt':'Coureur en plein effort',
+    'services.s3.tag':   'Bien-être',
     'services.s3.title': 'Bien-être & massages',
     'services.s3.body':  'Massages thérapeutiques, relaxation profonde et techniques de récupération pour relâcher les tensions et restaurer l\'équilibre corporel.',
+    'services.s3.imgAlt':'Massage thérapeutique relaxant',
     'services.btn':      'Voir tous nos services',
 
     /* ── Approach ── */
@@ -171,12 +178,19 @@ const translations = {
     /* ── Services preview ── */
     'services.eyebrow':  'Our services',
     'services.title':    'Three specialties,<br><em>one focus</em>: you',
+    'services.learnMore':'Learn more',
+    'services.s1.tag':   'Clinical',
     'services.s1.title': 'Physiotherapy',
     'services.s1.body':  'Post-operative rehabilitation, chronic pain management, manual therapy and targeted therapeutic exercises.',
+    'services.s1.imgAlt':'Manual physiotherapy session',
+    'services.s2.tag':   'Sports',
     'services.s2.title': 'Sports rehabilitation',
     'services.s2.body':  'Return to activity after injury, physical preparation, injury prevention and support for amateur and seasoned athletes alike.',
+    'services.s2.imgAlt':'Runner pushing through a workout',
+    'services.s3.tag':   'Wellness',
     'services.s3.title': 'Wellness & massage',
     'services.s3.body':  'Therapeutic massage, deep relaxation and recovery techniques to release tension and restore physical balance.',
+    'services.s3.imgAlt':'Relaxing therapeutic massage',
     'services.btn':      'See all our services',
 
     /* ── Approach ── */

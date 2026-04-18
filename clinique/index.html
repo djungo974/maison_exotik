@@ -243,35 +243,77 @@
   <!-- ═══════════ SERVICES PREVIEW ═══════════ -->
   <section class="section section--alt" id="services">
     <div class="container">
-      <span class="eyebrow" data-i18n="services.eyebrow">Nos prestations</span>
-      <h2 data-i18n="services.title">Trois expertises,<br><em>un même objectif</em> : vous</h2>
-
-      <div class="cards">
-        <article class="card">
-          <h3 data-i18n="services.s1.title">Kinésithérapie</h3>
-          <p data-i18n="services.s1.body">
-            Rééducation post-opératoire, traitement des douleurs chroniques,
-            thérapies manuelles et exercices thérapeutiques ciblés.
-          </p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.s2.title">Rééducation sportive</h3>
-          <p data-i18n="services.s2.body">
-            Reprise d'activité après blessure, préparation physique, prévention
-            des récidives.
-          </p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.s3.title">Bien-être &amp; massages</h3>
-          <p data-i18n="services.s3.body">
-            Massages thérapeutiques, relaxation profonde et techniques de
-            récupération.
-          </p>
-        </article>
+      <div class="services__head">
+        <div>
+          <span class="eyebrow" data-i18n="services.eyebrow">Nos prestations</span>
+          <h2 data-i18n="services.title">Trois expertises,<br><em>un même objectif</em> : vous</h2>
+        </div>
+        <a href="#" class="btn btn--outline" data-i18n="services.btn">Voir tous nos services</a>
       </div>
 
-      <div style="margin-top:2rem;">
-        <a href="#" class="btn btn--outline" data-i18n="services.btn">Voir tous nos services</a>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=85&fit=crop"
+                 loading="lazy"
+                 data-i18n-attr="alt:services.s1.imgAlt"
+                 alt="Séance de kinésithérapie manuelle">
+            <span class="service-card__tag" data-i18n="services.s1.tag">Clinique</span>
+          </div>
+          <div class="service-card__body">
+            <h3 data-i18n="services.s1.title">Kinésithérapie</h3>
+            <p data-i18n="services.s1.body">
+              Rééducation post-opératoire, traitement des douleurs chroniques,
+              thérapies manuelles et exercices thérapeutiques ciblés.
+            </p>
+            <a href="#" class="service-card__link">
+              <span data-i18n="services.learnMore">En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=85&fit=crop"
+                 loading="lazy"
+                 data-i18n-attr="alt:services.s2.imgAlt"
+                 alt="Coureur en plein effort">
+            <span class="service-card__tag" data-i18n="services.s2.tag">Sport</span>
+          </div>
+          <div class="service-card__body">
+            <h3 data-i18n="services.s2.title">Rééducation sportive</h3>
+            <p data-i18n="services.s2.body">
+              Reprise d'activité après blessure, préparation physique, prévention
+              des récidives et accompagnement de l'athlète amateur ou confirmé.
+            </p>
+            <a href="#" class="service-card__link">
+              <span data-i18n="services.learnMore">En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900&q=85&fit=crop"
+                 loading="lazy"
+                 data-i18n-attr="alt:services.s3.imgAlt"
+                 alt="Massage thérapeutique relaxant">
+            <span class="service-card__tag" data-i18n="services.s3.tag">Bien-être</span>
+          </div>
+          <div class="service-card__body">
+            <h3 data-i18n="services.s3.title">Bien-être &amp; massages</h3>
+            <p data-i18n="services.s3.body">
+              Massages thérapeutiques, relaxation profonde et techniques de
+              récupération pour relâcher les tensions et restaurer l'équilibre corporel.
+            </p>
+            <a href="#" class="service-card__link">
+              <span data-i18n="services.learnMore">En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>

@@ -49,6 +49,13 @@ const translations = {
     'about.body':       'Depuis plusieurs années, notre équipe accompagne chaque patient dans un parcours de soin adapté à ses besoins. Nous alliant écoute clinique et techniques manuelles modernes, nous vous aidons à retrouver mobilité, confort et vitalité.',
     'about.btn':        'En savoir plus sur nous',
     'about.imgAlt':     'Praticien accueillant un patient dans le cabinet',
+    'about.quote':      '« Prendre soin du corps, c\'est écouter ce qu\'il a à dire. »',
+    'about.stat1.num':   '500+',
+    'about.stat1.label': 'patients accompagnés',
+    'about.stat2.num':   '7',
+    'about.stat2.label': 'années d\'expertise clinique',
+    'about.stat3.num':   '98<small>%</small>',
+    'about.stat3.label': 'de satisfaction patient',
 
     /* ── Services preview ── */
     'services.eyebrow':  'Nos prestations',
@@ -153,6 +160,13 @@ const translations = {
     'about.body':       'For several years, our team has supported every patient through a care journey tailored to their needs. Combining clinical listening with modern manual techniques, we help you recover mobility, comfort and vitality.',
     'about.btn':        'Learn more about us',
     'about.imgAlt':     'Practitioner welcoming a patient at the clinic',
+    'about.quote':      '"To care for the body is to listen to what it has to say."',
+    'about.stat1.num':   '500+',
+    'about.stat1.label': 'patients supported',
+    'about.stat2.num':   '7',
+    'about.stat2.label': 'years of clinical expertise',
+    'about.stat3.num':   '98<small>%</small>',
+    'about.stat3.label': 'patient satisfaction',
 
     /* ── Services preview ── */
     'services.eyebrow':  'Our services',

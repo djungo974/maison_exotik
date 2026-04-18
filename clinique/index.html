@@ -196,21 +196,46 @@
   </section>
 
   <!-- ═══════════ ABOUT TEASER ═══════════ -->
-  <section class="section" id="about">
-    <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:3rem;align-items:center;">
-      <div>
-        <span class="eyebrow" data-i18n="about.eyebrow">Notre cabinet</span>
-        <h2 data-i18n="about.title">Une pratique<br><em>bienveillante</em> et rigoureuse</h2>
-        <p data-i18n="about.body">
-          Depuis plusieurs années, notre équipe accompagne chaque patient dans un
-          parcours de soin adapté à ses besoins.
-        </p>
-        <a href="#" class="btn btn--outline" data-i18n="about.btn">En savoir plus sur nous</a>
-      </div>
-      <div class="img-placeholder"
-           data-i18n-attr="aria-label:about.imgAlt"
-           aria-label="Praticien accueillant un patient dans le cabinet">
-        [ about image — step 2 ]
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content">
+          <span class="eyebrow" data-i18n="about.eyebrow">Notre cabinet</span>
+          <h2 data-i18n="about.title">Une pratique<br><em>bienveillante</em> et rigoureuse</h2>
+          <p data-i18n="about.body">
+            Depuis plusieurs années, notre équipe accompagne chaque patient dans un
+            parcours de soin adapté à ses besoins. Nous alliant écoute clinique et
+            techniques manuelles modernes, nous vous aidons à retrouver mobilité,
+            confort et vitalité.
+          </p>
+
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num" data-i18n="about.stat1.num">500+</span>
+              <span class="stat__label" data-i18n="about.stat1.label">patients accompagnés</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-i18n="about.stat2.num">7</span>
+              <span class="stat__label" data-i18n="about.stat2.label">années d'expertise clinique</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-i18n="about.stat3.num">98<small>%</small></span>
+              <span class="stat__label" data-i18n="about.stat3.label">de satisfaction patient</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--outline" data-i18n="about.btn">En savoir plus sur nous</a>
+        </div>
+
+        <figure class="about__media">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=85&fit=crop"
+               loading="lazy"
+               data-i18n-attr="alt:about.imgAlt"
+               alt="Praticien accueillant un patient dans le cabinet">
+          <figcaption class="about__quote" data-i18n="about.quote">
+            « Prendre soin du corps, c'est écouter ce qu'il a à dire. »
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
